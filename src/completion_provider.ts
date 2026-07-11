@@ -44,7 +44,7 @@ class CompletionProvider implements CompletionItemProvider {
     }
 
     const match = matches[0];
-    const lastWord = match.match(/\w+$/);
+    const lastWord = match.match(/[\w-]+$/);
 
     return { shouldComplete: true, lastWord: lastWord ? lastWord[0] : "" };
   }
