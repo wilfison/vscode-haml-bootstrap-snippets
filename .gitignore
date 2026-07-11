@@ -7,3 +7,7 @@ node_modules
 coverage
 tmp
 Gemfile.lock
+
+# Ignore AI files
+CLAUDE.md
+AGENTS.md

@@ -9,3 +9,9 @@ images/*.gif
 *.rb
 *.yml
 .ruby-lsp
+vendor/**
+.bundle/**
+
+# Ignore AI files
+CLAUDE.md
+AGENTS.md
