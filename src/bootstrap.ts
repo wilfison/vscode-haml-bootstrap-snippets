@@ -17,16 +17,23 @@ class Bootstrap {
     this.locationType = locationType;
   }
 
-  public load() {
+  public async load() {
     const cached = cache.cacheExists('bootstrap', this.version);
 
     if (cached) {
       this.classList = JSON.parse(cache.readCache('bootstrap', this.version));
-    } else {
-      this.locationType === 'remote' ? this.loadRemote() : this.loadLocal();
+      return;
     }
 
-    this.writeCache();
+    if (this.locationType === 'remote') {
+      await this.loadRemote();
+    } else {
+      this.loadLocal();
+    }
+
+    if (this.classList.length > 0) {
+      this.writeCache();
+    }
   }
 
   private async loadRemote() {
