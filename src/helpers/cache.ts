@@ -1,9 +1,17 @@
-import { existsSync, mkdirSync, readFileSync, unlinkSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, statSync, unlinkSync, writeFileSync } from "node:fs";
 import os from "node:os";
 import path from "node:path";
 
 export function cacheExists(lib: string, version: string): boolean {
   return existsSync(cacheFileLocation(lib, version));
+}
+
+export function cacheAgeMs(lib: string, version: string): number {
+  try {
+    return Date.now() - statSync(cacheFileLocation(lib, version)).mtimeMs;
+  } catch (error) {
+    return Infinity;
+  }
 }
 
 export function readCache(lib: string, version: string): string {

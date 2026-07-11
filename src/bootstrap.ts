@@ -3,6 +3,11 @@ import { findVersionAndLocation, readLocalCssFile } from './helpers/version';
 
 import * as cache from './helpers/cache';
 
+// When the Bootstrap version can't be pinned we cache under 'latest'. Expire
+// that entry so newly released versions eventually get picked up; pinned
+// versions are immutable and cached forever.
+const LATEST_CACHE_TTL_MS = 7 * 24 * 60 * 60 * 1000;
+
 class Bootstrap {
   public version: string = 'latest';
   public majorVersion: string = '5';
@@ -18,9 +23,7 @@ class Bootstrap {
   }
 
   public async load() {
-    const cached = cache.cacheExists('bootstrap', this.version);
-
-    if (cached) {
+    if (this.cacheIsUsable()) {
       this.classList = JSON.parse(cache.readCache('bootstrap', this.version));
       return;
     }
@@ -34,6 +37,18 @@ class Bootstrap {
     if (this.classList.length > 0) {
       this.writeCache();
     }
+  }
+
+  private cacheIsUsable(): boolean {
+    if (!cache.cacheExists('bootstrap', this.version)) {
+      return false;
+    }
+
+    if (this.version === 'latest') {
+      return cache.cacheAgeMs('bootstrap', this.version) < LATEST_CACHE_TTL_MS;
+    }
+
+    return true;
   }
 
   private async loadRemote() {
