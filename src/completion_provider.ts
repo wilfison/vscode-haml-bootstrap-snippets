@@ -1,7 +1,10 @@
 import { CompletionItem, CompletionItemProvider, Position, TextDocument } from "vscode";
 import Bootstrap from "./bootstrap";
 
-const CLASS_REGEX = /\.$|class["']?\s*[:=>]+\s*["']?[\w-\s:]*$/g
+// Matches either a HAML class shorthand chain (%tag/#id/.class with no spaces,
+// e.g. `%div.card.`) or a class attribute value (`class: "btn `). Anchoring the
+// dot branch to an element chain avoids firing on prose or Ruby like `foo.bar`.
+const CLASS_REGEX = /(?:^|\s)(?:%[\w-]+|#[\w-]+)?(?:\.[\w-]*)+$|class["']?\s*[:=>]+\s*["']?[\w\s:-]*$/
 
 class CompletionProvider implements CompletionItemProvider {
   public bootstrap: Bootstrap;
