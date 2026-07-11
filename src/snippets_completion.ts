@@ -1,33 +1,53 @@
 import path from "node:path";
 import { readFileSync } from "node:fs";
-import { CompletionItem, CompletionItemKind, CompletionItemProvider, SnippetString } from "vscode";
+import {
+  CancellationToken,
+  CompletionContext,
+  CompletionItem,
+  CompletionItemKind,
+  CompletionItemProvider,
+  Position,
+  SnippetString,
+  TextDocument,
+} from "vscode";
+
+interface SnippetDefinition {
+  prefix: string;
+  body: string[];
+}
+
+type SnippetMap = Record<string, SnippetDefinition>;
 
 class SnippetsCompletion implements CompletionItemProvider {
   private version: string;
-  private snippets: any;
+  private snippets: SnippetMap;
 
   constructor(version: string) {
     this.version = version;
     this.snippets = this.loadSnippets();
   }
 
-  public provideCompletionItems(_document: any, _position: any, _token: any, _context: any) {
-    const completionItems = Object.keys(this.snippets).map((key) => {
-      const snippet = new CompletionItem(this.snippets[key].prefix, CompletionItemKind.Snippet);
-      snippet.insertText = new SnippetString(this.snippets[key].body.join('\n'));
+  public provideCompletionItems(
+    _document: TextDocument,
+    _position: Position,
+    _token: CancellationToken,
+    _context: CompletionContext,
+  ): CompletionItem[] {
+    return Object.keys(this.snippets).map((key) => {
+      const definition = this.snippets[key];
+      const snippet = new CompletionItem(definition.prefix, CompletionItemKind.Snippet);
+      snippet.insertText = new SnippetString(definition.body.join('\n'));
       snippet.detail = key;
 
       return snippet;
     });
-
-    return completionItems;
   }
 
-  private loadSnippets() {
+  private loadSnippets(): SnippetMap {
     const file = path.resolve(__dirname, `../snippets/bootstrap${this.version}.code-snippets`);
     const content = readFileSync(file, 'utf8');
 
-    return JSON.parse(content);
+    return JSON.parse(content) as SnippetMap;
   }
 }
 
