@@ -1,4 +1,4 @@
-import { CompletionItem, CompletionItemProvider, Position, TextDocument } from "vscode";
+import { CompletionItem, CompletionItemKind, CompletionItemProvider, Position, TextDocument } from "vscode";
 import Bootstrap from "./bootstrap";
 
 // Matches either a HAML class shorthand chain (%tag/#id/.class with no spaces,
@@ -29,7 +29,7 @@ class CompletionProvider implements CompletionItemProvider {
 
     const completionItems = classList.map((className) => {
       const completionItem = new CompletionItem(className);
-      completionItem.kind = 9;
+      completionItem.kind = CompletionItemKind.Property;
 
       return completionItem;
     });
