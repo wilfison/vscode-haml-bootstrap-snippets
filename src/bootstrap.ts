@@ -61,14 +61,40 @@ class Bootstrap {
   }
 
   private extractClasses(content: string): Array<string> {
-    const regex = /\}\.([\w-]+)/g;
     const classes: Set<string> = new Set();
-    const matches = content.match(regex);
+    const classRegex = /\.(-?[a-zA-Z_][\w-]*)/g;
 
-    if (matches) {
-      matches.forEach(match => {
-        classes.add(match.slice(2));
-      });
+    // Depth of *declaration* blocks we're inside. Property values live here and
+    // can contain dots (e.g. `.5rem` or SVG data URIs), so they must be skipped.
+    // At-rule blocks (@media/@supports/@keyframes) are not counted, so their
+    // nested selectors are still scanned.
+    let skipDepth = 0;
+    let selector = '';
+
+    for (const char of content) {
+      if (char === '{') {
+        const isAtRule = selector.trimStart().startsWith('@');
+
+        if (skipDepth === 0 && !isAtRule) {
+          let match: RegExpExecArray | null;
+          while ((match = classRegex.exec(selector)) !== null) {
+            classes.add(match[1]);
+          }
+          skipDepth = 1;
+        } else if (skipDepth > 0) {
+          skipDepth++;
+        }
+
+        selector = '';
+      } else if (char === '}') {
+        if (skipDepth > 0) {
+          skipDepth--;
+        }
+
+        selector = '';
+      } else if (skipDepth === 0) {
+        selector += char;
+      }
     }
 
     return Array.from(classes);
