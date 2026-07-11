@@ -13,13 +13,15 @@ class Bootstrap {
   public majorVersion: string = '5';
   public locationType: string = 'remote';
   public classList: Array<string> = [];
+  private bootstrapRoot: string = '';
 
   constructor() {
-    let [version, locationType] = findVersionAndLocation('bootstrap', this.rootPath());
+    const [version, locationType, rootPath] = this.detect();
 
     this.version = version;
     this.majorVersion = this.version.split('.')[0];
     this.locationType = locationType;
+    this.bootstrapRoot = rootPath;
   }
 
   public async load() {
@@ -67,12 +69,26 @@ class Bootstrap {
   }
 
   private loadLocal() {
-    const content = readLocalCssFile(this.rootPath());
+    const content = readLocalCssFile(this.bootstrapRoot);
     this.classList = this.extractClasses(content);
   }
 
-  private rootPath(): string {
-    return workspace.workspaceFolders ? workspace.workspaceFolders[0].uri.fsPath : '';
+  // Scan every workspace folder and use the first one where Bootstrap is
+  // actually detected (node_modules or Gemfile.lock). Falls back to the first
+  // folder so a remote 'latest' lookup still has a sensible root.
+  private detect(): [string, string, string] {
+    const folders = workspace.workspaceFolders ?? [];
+
+    for (const folder of folders) {
+      const root = folder.uri.fsPath;
+      const [version, locationType] = findVersionAndLocation('bootstrap', root);
+
+      if (version !== 'latest') {
+        return [version, locationType, root];
+      }
+    }
+
+    return ['latest', 'remote', folders[0]?.uri.fsPath ?? ''];
   }
 
   private remoteUrl(): string {
