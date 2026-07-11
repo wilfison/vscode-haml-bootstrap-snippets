@@ -16,7 +16,6 @@ export function activate(context: vscode.ExtensionContext) {
       const disposable = vscode.languages.registerCompletionItemProvider(
         schemaFile,
         new SnippetsCompletion(version),
-        'bs',
       );
 
       context.subscriptions.push(disposable);
