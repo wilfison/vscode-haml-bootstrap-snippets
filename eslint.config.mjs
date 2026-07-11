@@ -29,7 +29,7 @@ export default [
       eqeqeq: "warn",
       "no-throw-literal": "warn",
       semi: "warn",
+      quotes: ["warn", "single"],
     },
-    quotes: ["warn", "single"],
   },
 ];
