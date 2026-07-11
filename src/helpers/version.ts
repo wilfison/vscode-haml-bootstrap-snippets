@@ -18,8 +18,10 @@ export function findVersionAndLocation(lib: string, rootPath: string): Array<str
 
 function findVersionOnNodeModules(lib: string, rootPath: string): string | null {
   try {
-    const bsVersion = require(path.join(rootPath, 'node_modules', lib, 'package.json')).version;
-    return bsVersion;
+    const packageJsonPath = path.join(rootPath, 'node_modules', lib, 'package.json');
+    const packageJson = JSON.parse(readFileSync(packageJsonPath, 'utf8'));
+
+    return packageJson.version ?? null;
   } catch (error) {
     return null;
   }
