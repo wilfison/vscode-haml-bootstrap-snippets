@@ -52,10 +52,18 @@ class Bootstrap {
   }
 
   private async loadRemote() {
-    const response = await fetch(this.remoteUrl());
-    const content = await response.text();
+    try {
+      const response = await fetch(this.remoteUrl());
 
-    this.classList = this.extractClasses(content);
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status} for ${this.remoteUrl()}`);
+      }
+
+      const content = await response.text();
+      this.classList = this.extractClasses(content);
+    } catch (error) {
+      console.error(`Error fetching Bootstrap classes: ${error}`);
+    }
   }
 
   private loadLocal() {

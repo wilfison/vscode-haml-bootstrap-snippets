@@ -24,7 +24,9 @@ export function activate(context: vscode.ExtensionContext) {
   });
 
   if (config.get('enableCssClassCompletion')) {
-    bootstrap.load();
+    bootstrap.load().catch((error) => {
+      console.error(`Failed to load Bootstrap classes: ${error}`);
+    });
 
     const disposable = vscode.languages.registerCompletionItemProvider(
       schemaFile,
