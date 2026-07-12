@@ -1,10 +1,6 @@
 import { readFileSync } from "node:fs";
 import path from "node:path";
 
-export function readLocalCssFile(rootPath: string): string {
-  return readFileSync(path.join(rootPath, 'node_modules', 'bootstrap', 'dist', 'css', 'bootstrap.min.css'), 'utf8');
-}
-
 export function findVersionAndLocation(lib: string, rootPath: string): Array<string> {
   let bsVersion: string | null = findVersionOnNodeModules(lib, rootPath);
   const location = bsVersion ? 'local' : 'remote';

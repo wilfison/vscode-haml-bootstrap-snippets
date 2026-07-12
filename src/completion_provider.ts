@@ -1,5 +1,5 @@
 import { CompletionItem, CompletionItemKind, CompletionItemProvider, Position, TextDocument } from "vscode";
-import Bootstrap from "./bootstrap";
+import CssLibrary from "./css_library";
 
 // Matches either a HAML class shorthand chain (%tag/#id/.class with no spaces,
 // e.g. `%div.card.`) or a class attribute value (`class: "btn `). Anchoring the
@@ -7,10 +7,10 @@ import Bootstrap from "./bootstrap";
 const CLASS_REGEX = /(?:^|\s)(?:%[\w-]+|#[\w-]+)?(?:\.[\w-]*)+$|class["']?\s*[:=>]+\s*["']?[\w\s:-]*$/
 
 class CompletionProvider implements CompletionItemProvider {
-  public bootstrap: Bootstrap;
+  public libraries: CssLibrary[];
 
-  constructor(bootstrap: Bootstrap) {
-    this.bootstrap = bootstrap;
+  constructor(libraries: CssLibrary[]) {
+    this.libraries = libraries;
   }
 
   public provideCompletionItems(document: TextDocument, position: Position, _token: any, _context: any): CompletionItem[] | undefined {
@@ -20,19 +20,21 @@ class CompletionProvider implements CompletionItemProvider {
       return undefined;
     }
 
-    let classList = this.bootstrap.classList;
+    const completionItems: CompletionItem[] = [];
 
-    if (lastWord) {
-      classList = this.bootstrap.classList
-        .filter((className) => className.startsWith(lastWord));
+    for (const library of this.libraries) {
+      for (const className of library.classList) {
+        if (lastWord && !className.startsWith(lastWord)) {
+          continue;
+        }
+
+        const completionItem = new CompletionItem(className);
+        completionItem.kind = CompletionItemKind.Property;
+        completionItem.detail = library.name;
+
+        completionItems.push(completionItem);
+      }
     }
-
-    const completionItems = classList.map((className) => {
-      const completionItem = new CompletionItem(className);
-      completionItem.kind = CompletionItemKind.Property;
-
-      return completionItem;
-    });
 
     return completionItems;
   }

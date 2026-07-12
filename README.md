@@ -36,3 +36,18 @@ The current bootstrap version is determined by:
 1. The version of the `bootstrap` package in the `node_modules` folder.
 2. The version of the `bootstrap` gem in the `Gemfile.lock` file.
 3. Latest version of the `bootstrap` package on CDN.
+
+## Bootstrap Icons completion
+
+When the [`bootstrap-icons`](https://icons.getbootstrap.com/) package is detected
+in your project, the `bi-*` icon classes are added to class completion alongside
+the Bootstrap classes.
+
+Detection follows the same order as above (`node_modules`, then `Gemfile.lock`);
+if the package isn't found, no icon classes are suggested. Toggle it with:
+
+```json
+{
+  "hamlBootstrap.enableBootstrapIconsCompletion": true
+}
+```

@@ -36,6 +36,11 @@
           "type": "boolean",
           "default": true,
           "description": "Enable CSS class completion"
+        },
+        "hamlBootstrap.enableBootstrapIconsCompletion": {
+          "type": "boolean",
+          "default": true,
+          "description": "Suggest Bootstrap Icons (bi-*) classes when the bootstrap-icons package is detected in the project"
         }
       }
     }
