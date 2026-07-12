@@ -4,6 +4,7 @@ bootstrap/**
 scripts/**
 tmp/**
 images/*.gif
+images/*.svg
 .gitignore
 *.vsix
 *.rb
