@@ -2,6 +2,13 @@
 
 All notable changes to the extension will be documented in this file.
 
+## [1.2.0]
+
+- Feature: Suggest Bootstrap Icons (`bi-*`) classes when the `bootstrap-icons` package is detected, toggleable via `hamlBootstrap.enableBootstrapIconsCompletion`.
+- Feature: Ship an offline class-list fallback so CSS class completion still works when the CDN is unreachable and nothing is cached.
+- Feature: Rewrite snippets as native VS Code templates with interactive tabstops, choice lists, and mirrored ids.
+- Chore: Replace the extension icon.
+
 ## [1.1.0]
 
 - Feature: Detect Bootstrap across all folders in a multi-root workspace.

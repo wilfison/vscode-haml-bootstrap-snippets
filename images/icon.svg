@@ -110,7 +110,7 @@
          result="shape"
          id="feBlend6-3"
          mode="normal" /></filter></defs><rect
-     style="fill:url(#bs-logo-a);stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+     style="fill:#9013fe;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;fill-opacity:1"
      id="rect7"
      width="512"
      height="512"

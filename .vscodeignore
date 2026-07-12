@@ -6,6 +6,12 @@ tmp/**
 images/*.gif
 images/*.svg
 .gitignore
+eslint.config.mjs
+tsconfig.json
+.vscode-test.mjs
+src/**
+out/test/**
+out/**/*.js.map
 *.vsix
 *.rb
 *.yml
