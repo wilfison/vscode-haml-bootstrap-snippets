@@ -1,0 +1,11 @@
+%table.table
+  %thead.thead-${1|dark,light|}
+    %tr
+      %th{scope: 'col'} #
+      %th{scope: 'col'} ${2:First}
+      %th{scope: 'col'} ${3:Last}
+  %tbody
+    %tr
+      %th{scope: 'row'} 1
+      %td ${4:Mark}
+      %td ${5:Otto}

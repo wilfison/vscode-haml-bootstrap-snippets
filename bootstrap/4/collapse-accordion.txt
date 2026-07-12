@@ -1,0 +1,18 @@
+.accordion#${1:accordion}
+  .card
+    .card-header#${1:accordion}-heading-1
+      %h2.mb-0
+        %button.btn.btn-link.btn-block.text-left{'aria-controls': '${1:accordion}-collapse-1', 'aria-expanded': 'true', 'data-target': '#${1:accordion}-collapse-1', 'data-toggle': 'collapse', type: 'button'}
+          ${2:Collapsible Group Item #1}
+    .collapse.show#${1:accordion}-collapse-1{'aria-labelledby': '${1:accordion}-heading-1', 'data-parent': '#${1:accordion}'}
+      .card-body
+        ${3:First panel body. This panel is shown by default.}
+
+  .card
+    .card-header#${1:accordion}-heading-2
+      %h2.mb-0
+        %button.btn.btn-link.btn-block.text-left.collapsed{'aria-controls': '${1:accordion}-collapse-2', 'aria-expanded': 'false', 'data-target': '#${1:accordion}-collapse-2', 'data-toggle': 'collapse', type: 'button'}
+          ${4:Collapsible Group Item #2}
+    .collapse#${1:accordion}-collapse-2{'aria-labelledby': '${1:accordion}-heading-2', 'data-parent': '#${1:accordion}'}
+      .card-body
+        ${5:Second panel body. This panel is hidden by default.}

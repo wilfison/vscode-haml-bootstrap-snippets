@@ -1,0 +1,3 @@
+.form-floating
+  %input.form-control#${1:floatingInput}{name: '${1:floatingInput}', placeholder: '${2:name@example.com}', type: '${3|text,email,password|}'}/
+  %label{for: '${1:floatingInput}'} ${4:Label}

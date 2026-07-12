@@ -1,0 +1,12 @@
+.card
+  %img.card-img-top{alt: '${1:Placeholder}', src: '${2:image.jpg}'}/
+  .card-body
+    %h5.card-title.placeholder-glow
+      %span.placeholder.col-6
+    %p.card-text.placeholder-glow
+      %span.placeholder.col-7
+      %span.placeholder.col-4
+      %span.placeholder.col-4
+      %span.placeholder.col-6
+      %span.placeholder.col-8
+    %a.btn.btn-primary.disabled.placeholder.col-6{'aria-disabled': 'true', href: '#', tabindex: '-1'}

@@ -1,0 +1,15 @@
+%button.btn.btn-primary#${1:liveToastBtn}{type: 'button'} ${2:Show live toast}
+
+.toast#${3:liveToast}{'aria-atomic': 'true', 'aria-live': 'assertive', 'data-delay': '${4:5000}', role: 'alert'}
+  .toast-header
+    %strong.mr-auto ${5:Bootstrap}
+    %small ${6:just now}
+    %button.ml-2.mb-1.close{'aria-label': 'Close', 'data-dismiss': 'toast', type: 'button'}
+      %span{'aria-hidden': 'true'} &times;
+  .toast-body
+    ${7:Hello, world! This is a toast message.}
+
+:javascript
+  $('#${1:liveToastBtn}').click(() => {
+    $('#${3:liveToast}').toast('show');
+  });

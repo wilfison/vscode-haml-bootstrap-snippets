@@ -1,0 +1,23 @@
+.dropdown
+  %button.btn.btn-secondary.dropdown-toggle{'aria-expanded': 'false', 'data-bs-toggle': 'dropdown', type: 'button'}
+    ${1:Dropdown form}
+  %ul.dropdown-menu
+    %li
+      %form.px-4.py-3
+        .mb-3
+          %label.form-label{for: '${2:dropdown-email}'} ${3:Email address}
+          %input.form-control#${2:dropdown-email}{placeholder: 'email@example.com', type: 'email'}/
+        .mb-3
+          %label.form-label{for: '${4:dropdown-password}'} ${5:Password}
+          %input.form-control#${4:dropdown-password}{placeholder: 'Password', type: 'password'}/
+        .mb-3
+          .form-check
+            %input.form-check-input#${6:dropdown-check}{type: 'checkbox'}/
+            %label.form-check-label{for: '${6:dropdown-check}'} ${7:Remember me}
+        %button.btn.btn-primary{type: 'submit'} ${8:Sign in}
+    %li
+      %hr.dropdown-divider/
+    %li
+      %a.dropdown-item{href: '#'} ${9:New around here? Sign up}
+    %li
+      %a.dropdown-item{href: '#'} ${10:Forgot password?}

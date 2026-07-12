@@ -1,0 +1,1 @@
+%button.btn.btn-secondary{'data-html': 'true', 'data-toggle': 'tooltip', title: '${2:<em>Tooltip</em> <u>with</u> <b>HTML</b>}', type: 'button'} ${1:Tooltip with HTML}

@@ -1,0 +1,1 @@
+%button.btn.btn-${1|primary,secondary,success,danger,warning,info,light,dark|}{'aria-pressed': 'false', 'data-bs-toggle': 'button', type: 'button'} ${2:Toggle button}

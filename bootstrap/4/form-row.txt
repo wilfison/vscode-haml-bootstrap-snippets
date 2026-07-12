@@ -1,0 +1,8 @@
+%form
+  .form-row
+    .form-group.col-md-6
+      %label{for: '${1:email}'} ${2:Email}
+      %input.form-control#${1:email}{name: '${1:email}', placeholder: 'Email', type: 'email'}/
+    .form-group.col-md-6
+      %label{for: '${3:password}'} ${4:Password}
+      %input.form-control#${3:password}{name: '${3:password}', placeholder: 'Password', type: 'password'}/

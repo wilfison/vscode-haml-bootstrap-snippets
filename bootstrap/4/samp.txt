@@ -1,0 +1,1 @@
+%samp ${1:Sample output text here...}

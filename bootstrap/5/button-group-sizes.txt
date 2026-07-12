@@ -1,0 +1,4 @@
+.btn-group.btn-group-${1|lg,sm|}{'aria-label': '${2:Sizing example}', role: 'group'}
+  %button.btn.btn-primary{type: 'button'} ${3:Left}
+  %button.btn.btn-primary{type: 'button'} ${4:Middle}
+  %button.btn.btn-primary{type: 'button'} ${5:Right}

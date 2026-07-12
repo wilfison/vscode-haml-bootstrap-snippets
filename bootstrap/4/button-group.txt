@@ -1,0 +1,4 @@
+.btn-group{'aria-label': '${1:Basic example}', role: 'group'}
+  %button.btn.btn-secondary{type: 'button'} ${2:Left}
+  %button.btn.btn-secondary{type: 'button'} ${3:Middle}
+  %button.btn.btn-secondary{type: 'button'} ${4:Right}

@@ -1,0 +1,3 @@
+%picture
+  %source{srcset: '${1:image.webp}', type: 'image/webp'}/
+  %img.img-fluid{alt: '${3:Description}', src: '${2:image.jpg}'}/

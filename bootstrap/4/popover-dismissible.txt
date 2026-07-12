@@ -1,0 +1,1 @@
+%a.btn.btn-lg.btn-danger{'data-content': '${3:And here is some amazing content. It is very engaging. Right?}', 'data-toggle': 'popover', 'data-trigger': 'focus', role: 'button', tabindex: '0', title: '${2:Dismissible popover}'} ${1:Dismissible popover}

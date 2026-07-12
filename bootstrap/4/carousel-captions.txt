@@ -1,0 +1,23 @@
+.carousel.slide#${1:carousel}{'data-ride': 'carousel'}
+  .carousel-inner
+    .carousel-item.active
+      %img.d-block.w-100{alt: '${2:First slide}', src: '#'}/
+      .carousel-caption.d-none.d-md-block
+        %h5 ${3:First slide label}
+        %p ${4:Some representative placeholder content for the first slide.}
+    .carousel-item
+      %img.d-block.w-100{alt: '${5:Second slide}', src: '#'}/
+      .carousel-caption.d-none.d-md-block
+        %h5 ${6:Second slide label}
+        %p ${7:Some representative placeholder content for the second slide.}
+    .carousel-item
+      %img.d-block.w-100{alt: '${8:Third slide}', src: '#'}/
+      .carousel-caption.d-none.d-md-block
+        %h5 ${9:Third slide label}
+        %p ${10:Some representative placeholder content for the third slide.}
+  %a.carousel-control-prev{'data-slide': 'prev', href: '#${1:carousel}', role: 'button'}
+    %span.carousel-control-prev-icon{'aria-hidden': 'true'}
+    %span.sr-only Previous
+  %a.carousel-control-next{'data-slide': 'next', href: '#${1:carousel}', role: 'button'}
+    %span.carousel-control-next-icon{'aria-hidden': 'true'}
+    %span.sr-only Next

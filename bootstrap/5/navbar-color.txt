@@ -1,0 +1,11 @@
+%nav.navbar.navbar-expand-lg.bg-${1|primary,secondary,success,danger,warning,info,light,dark|}{'data-bs-theme': 'dark'}
+  .container-fluid
+    %a.navbar-brand{href: '#'} ${2:Navbar}
+    %button.navbar-toggler{'aria-controls': '${3:navbar-color}', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation', 'data-bs-target': '#${3:navbar-color}', 'data-bs-toggle': 'collapse', type: 'button'}
+      %span.navbar-toggler-icon
+    .collapse.navbar-collapse#${3:navbar-color}
+      %ul.navbar-nav
+        %li.nav-item
+          %a.nav-link.active{'aria-current': 'page', href: '#'} ${4:Home}
+        %li.nav-item
+          %a.nav-link{href: '#'} ${5:Link}

@@ -1,0 +1,6 @@
+.custom-control.custom-radio
+  %input.custom-control-input#${1:customRadio1}{name: '${2:customRadio}', type: 'radio'}/
+  %label.custom-control-label{for: '${1:customRadio1}'} ${3:Toggle this custom radio}
+.custom-control.custom-radio
+  %input.custom-control-input#${4:customRadio2}{name: '${2:customRadio}', type: 'radio'}/
+  %label.custom-control-label{for: '${4:customRadio2}'} ${5:Or toggle this other custom radio}

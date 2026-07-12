@@ -1,0 +1,9 @@
+.row
+  .col-4
+    .list-group#${1:list-tab}{role: 'tablist'}
+      %a.list-group-item.list-group-item-action.active#${2:list-home}-list{'aria-controls': '${2:list-home}', 'data-toggle': 'list', href: '#${2:list-home}', role: 'tab'} ${3:Home}
+      %a.list-group-item.list-group-item-action#${4:list-profile}-list{'aria-controls': '${4:list-profile}', 'data-toggle': 'list', href: '#${4:list-profile}', role: 'tab'} ${5:Profile}
+  .col-8
+    .tab-content#${1:list-tab}-content
+      .tab-pane.fade.show.active#${2:list-home}{'aria-labelledby': '${2:list-home}-list', role: 'tabpanel'} ${6:Home content}
+      .tab-pane.fade#${4:list-profile}{'aria-labelledby': '${4:list-profile}-list', role: 'tabpanel'} ${7:Profile content}

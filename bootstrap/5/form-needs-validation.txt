@@ -1,0 +1,13 @@
+%form.row.g-3.needs-validation{novalidate: 'novalidate'}
+  .col-md-6
+    %label.form-label{for: '${1:firstName}'} ${2:First name}
+    %input.form-control#${1:firstName}{name: '${1:firstName}', required: 'required', type: 'text', value: '${3:Mark}'}/
+    .valid-feedback
+      ${4:Looks good!}
+  .col-md-6
+    %label.form-label{for: '${5:lastName}'} ${6:Last name}
+    %input.form-control#${5:lastName}{name: '${5:lastName}', required: 'required', type: 'text', value: '${7:Otto}'}/
+    .valid-feedback
+      ${8:Looks good!}
+  .col-12
+    %button.btn.btn-primary{type: 'submit'} ${9:Submit form}

@@ -1,0 +1,2 @@
+.${1|container-sm,container-md,container-lg,container-xl,container-xxl|}
+  $0

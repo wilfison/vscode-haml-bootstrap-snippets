@@ -1,0 +1,5 @@
+%dl.row
+  %dt.col-sm-3 ${1:Term}
+  %dd.col-sm-9 ${2:Definition}
+  %dt.col-sm-3 ${3:Term}
+  %dd.col-sm-9 ${4:Definition}

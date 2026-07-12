@@ -1,0 +1,3 @@
+.custom-control.custom-switch
+  %input.custom-control-input#${1:customSwitch}{name: '${1:customSwitch}', type: 'checkbox'}/
+  %label.custom-control-label{for: '${1:customSwitch}'} ${2:Toggle this switch element}

@@ -1,0 +1,2 @@
+%input.btn-check#${1:btncheck}{autocomplete: 'off', name: '${1:btncheck}', type: 'checkbox'}/
+%label.btn.btn-outline-primary{for: '${1:btncheck}'} ${2:Checked}

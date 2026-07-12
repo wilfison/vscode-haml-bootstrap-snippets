@@ -1,0 +1,8 @@
+.toast{'aria-atomic': 'true', 'aria-live': 'assertive', role: 'alert'}
+  .toast-header
+    %strong.mr-auto ${1:Bootstrap}
+    %small ${2:11 mins ago}
+    %button.ml-2.mb-1.close{'aria-label': 'Close', 'data-dismiss': 'toast', type: 'button'}
+      %span{'aria-hidden': 'true'} &times;
+  .toast-body
+    ${3:Hello, world! This is a toast message.}

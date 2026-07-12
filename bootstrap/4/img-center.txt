@@ -1,0 +1,1 @@
+%img.mx-auto.d-block{alt: '${2:Centered image}', src: '${1:...}'}/

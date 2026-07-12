@@ -1,0 +1,9 @@
+%form.form-inline
+  %label.sr-only{for: '${1:name}'} ${2:Name}
+  %input.form-control.mb-2.mr-sm-2#${1:name}{name: '${1:name}', placeholder: 'Jane Doe', type: 'text'}/
+  %label.sr-only{for: '${3:username}'} ${4:Username}
+  %input.form-control.mb-2.mr-sm-2#${3:username}{name: '${3:username}', placeholder: 'Username', type: 'text'}/
+  .form-check.mb-2.mr-sm-2
+    %input.form-check-input#${5:check}{name: '${5:check}', type: 'checkbox'}/
+    %label.form-check-label{for: '${5:check}'} ${6:Remember me}
+  %button.btn.btn-primary.mb-2{type: 'submit'} ${7:Submit}

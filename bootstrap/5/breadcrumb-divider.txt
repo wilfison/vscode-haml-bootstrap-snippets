@@ -1,0 +1,5 @@
+%nav{'aria-label': 'breadcrumb', style: '--bs-breadcrumb-divider: "${1:>}";'}
+  %ol.breadcrumb
+    %li.breadcrumb-item
+      %a{href: '#'} ${2:Home}
+    %li.breadcrumb-item.active{'aria-current': 'page'} ${3:Library}

@@ -1,0 +1,4 @@
+.jumbotron.jumbotron-fluid
+  .container
+    %h1.display-4 ${1:Fluid jumbotron}
+    %p.lead ${2:This is a modified jumbotron that occupies the entire horizontal space of its parent.}

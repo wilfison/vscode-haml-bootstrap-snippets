@@ -1,0 +1,4 @@
+.form-group.row
+  %label.col-sm-2.col-form-label{for: '${1:input}'} ${2:Email}
+  .col-sm-10
+    %input.form-control#${1:input}{name: '${1:input}', placeholder: 'Email', type: 'email'}/

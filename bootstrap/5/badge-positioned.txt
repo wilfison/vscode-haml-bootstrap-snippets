@@ -1,0 +1,5 @@
+%button.btn.btn-primary.position-relative{type: 'button'}
+  ${1:Inbox}
+  %span.position-absolute.top-0.start-100.translate-middle.badge.rounded-pill.bg-${2|primary,secondary,success,danger,warning,info,light,dark|}
+    ${3:99+}
+    %span.visually-hidden ${4:unread messages}

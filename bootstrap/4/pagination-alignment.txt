@@ -1,0 +1,12 @@
+%nav{'aria-label': '${1:Page navigation}'}
+  %ul.pagination.${2|justify-content-center,justify-content-end|}
+    %li.page-item.disabled
+      %a.page-link{'aria-disabled': 'true', href: '#', tabindex: '-1'} ${3:Previous}
+    %li.page-item
+      %a.page-link{href: '#'} 1
+    %li.page-item
+      %a.page-link{href: '#'} 2
+    %li.page-item
+      %a.page-link{href: '#'} 3
+    %li.page-item
+      %a.page-link{href: '#'} ${4:Next}

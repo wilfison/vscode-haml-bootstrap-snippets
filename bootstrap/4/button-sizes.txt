@@ -1,0 +1,1 @@
+%button.btn.btn-${1|primary,secondary,success,danger,warning,info,light,dark|}.btn-${2|lg,sm|}{type: 'button'} ${3:Button}

@@ -1,0 +1,7 @@
+.d-flex.align-items-start
+  .list-group.me-3{id: '${1:list-tab}', role: 'tablist'}
+    %a.list-group-item.list-group-item-action.active#${2:home}-tab{'aria-controls': '${2:home}-pane', 'data-bs-toggle': 'list', href: '#${2:home}-pane', role: 'tab'} ${3:Home}
+    %a.list-group-item.list-group-item-action#${4:profile}-tab{'aria-controls': '${4:profile}-pane', 'data-bs-toggle': 'list', href: '#${4:profile}-pane', role: 'tab'} ${5:Profile}
+  .tab-content
+    .tab-pane.fade.show.active#${2:home}-pane{'aria-labelledby': '${2:home}-tab', role: 'tabpanel', tabindex: '0'} ${6:Home content}
+    .tab-pane.fade#${4:profile}-pane{'aria-labelledby': '${4:profile}-tab', role: 'tabpanel', tabindex: '0'} ${7:Profile content}

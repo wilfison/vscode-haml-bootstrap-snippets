@@ -1,0 +1,18 @@
+%table.table
+  %thead
+    %tr
+      %th{scope: 'col'} #
+      %th{scope: 'col'} ${1:First}
+      %th{scope: 'col'} ${2:Last}
+      %th{scope: 'col'} ${3:Handle}
+  %tbody
+    %tr
+      %th{scope: 'row'} 1
+      %td ${4:Mark}
+      %td ${5:Otto}
+      %td ${6:@mdo}
+    %tr
+      %th{scope: 'row'} 2
+      %td ${7:Jacob}
+      %td ${8:Thornton}
+      %td ${9:@fat}

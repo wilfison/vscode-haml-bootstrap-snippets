@@ -1,0 +1,12 @@
+%nav{'aria-label': '${1:Page navigation}'}
+  %ul.pagination.pagination-${2|lg,sm|}
+    %li.page-item
+      %a.page-link{href: '#'} ${3:Previous}
+    %li.page-item
+      %a.page-link{href: '#'} 1
+    %li.page-item
+      %a.page-link{href: '#'} 2
+    %li.page-item
+      %a.page-link{href: '#'} 3
+    %li.page-item
+      %a.page-link{href: '#'} ${4:Next}

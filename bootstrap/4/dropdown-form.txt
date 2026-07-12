@@ -1,0 +1,19 @@
+.dropdown
+  %button.btn.btn-secondary.dropdown-toggle#${1:dropdownMenuButton}{'aria-expanded': 'false', 'aria-haspopup': 'true', 'data-toggle': 'dropdown', type: 'button'}
+    ${2:Dropdown}
+  .dropdown-menu{'aria-labelledby': '${1:dropdownMenuButton}'}
+    %form.px-4.py-3
+      .form-group
+        %label{for: '${3:dropdownFormEmail}'} ${4:Email address}
+        %input.form-control#${3:dropdownFormEmail}{name: '${3:dropdownFormEmail}', placeholder: 'email@example.com', type: 'email'}/
+      .form-group
+        %label{for: '${5:dropdownFormPassword}'} ${6:Password}
+        %input.form-control#${5:dropdownFormPassword}{name: '${5:dropdownFormPassword}', placeholder: 'Password', type: 'password'}/
+      .form-group
+        .form-check
+          %input.form-check-input#${7:dropdownCheck}{name: '${7:dropdownCheck}', type: 'checkbox'}/
+          %label.form-check-label{for: '${7:dropdownCheck}'} ${8:Remember me}
+      %button.btn.btn-primary{type: 'submit'} ${9:Sign in}
+    .dropdown-divider
+    %a.dropdown-item{href: '#'} ${10:New around here? Sign up}
+    %a.dropdown-item{href: '#'} ${11:Forgot password?}

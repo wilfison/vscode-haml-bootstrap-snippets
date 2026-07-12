@@ -1,0 +1,2 @@
+.spinner-grow{role: 'status'}
+  %span.visually-hidden ${1:Loading...}

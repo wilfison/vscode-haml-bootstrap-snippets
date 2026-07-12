@@ -1,0 +1,2 @@
+.spinner-border.text-${1|primary,secondary,success,danger,warning,info,light,dark|}{role: 'status'}
+  %span.sr-only ${2:Loading...}

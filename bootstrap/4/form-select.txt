@@ -1,0 +1,7 @@
+.form-group
+  %label{for: '${1:select}'} ${2:Example select}
+  %select.form-control#${1:select}{name: '${1:select}'}
+    %option{selected: 'selected'} ${3:Open this select menu}
+    %option{value: '1'} ${4:One}
+    %option{value: '2'} ${5:Two}
+    %option{value: '3'} ${6:Three}

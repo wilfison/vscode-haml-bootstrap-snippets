@@ -1,0 +1,6 @@
+.input-group
+  %label.input-group-text{for: '${1:groupSelect}'} ${2:Options}
+  %select.form-select#${1:groupSelect}{name: '${1:groupSelect}'}
+    %option{selected: 'selected'} ${3:Choose...}
+    %option{value: '1'} ${4:One}
+    %option{value: '2'} ${5:Two}

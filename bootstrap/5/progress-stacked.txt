@@ -1,0 +1,7 @@
+.progress-stacked
+  .progress{'aria-label': '${2:Segment one}', 'aria-valuemax': '100', 'aria-valuemin': '0', 'aria-valuenow': '${1:15}', role: 'progressbar', style: 'width: ${1:15}%'}
+    .progress-bar
+  .progress{'aria-label': '${4:Segment two}', 'aria-valuemax': '100', 'aria-valuemin': '0', 'aria-valuenow': '${3:30}', role: 'progressbar', style: 'width: ${3:30}%'}
+    .progress-bar.bg-success
+  .progress{'aria-label': '${6:Segment three}', 'aria-valuemax': '100', 'aria-valuemin': '0', 'aria-valuenow': '${5:20}', role: 'progressbar', style: 'width: ${5:20}%'}
+    .progress-bar.bg-info

@@ -1,0 +1,5 @@
+.row.justify-content-${1|start,center,end,around,between,evenly|}
+  .col-4
+    ${2:Column}
+  .col-4
+    ${3:Column}

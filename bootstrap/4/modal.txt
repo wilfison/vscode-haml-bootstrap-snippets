@@ -1,0 +1,15 @@
+%button.btn.btn-primary{'data-target': '#${1:modal}', 'data-toggle': 'modal', type: 'button'}
+  ${2:Launch modal}
+
+.modal.fade#${1:modal}{'aria-hidden': 'true', 'aria-labelledby': '${1:modal}-label', role: 'dialog', tabindex: '-1'}
+  .modal-dialog{role: 'document'}
+    .modal-content
+      .modal-header
+        %h5.modal-title#${1:modal}-label ${3:Modal title}
+        %button.close{'aria-label': 'Close', 'data-dismiss': 'modal', type: 'button'}
+          %span{'aria-hidden': 'true'} &times;
+      .modal-body
+        $0
+      .modal-footer
+        %button.btn.btn-secondary{'data-dismiss': 'modal', type: 'button'} ${4:Close}
+        %button.btn.btn-primary{type: 'button'} ${5:Save changes}

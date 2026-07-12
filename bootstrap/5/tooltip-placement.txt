@@ -1,0 +1,2 @@
+%button.btn.btn-${1|primary,secondary,success,danger,warning,info,light,dark|}{'data-bs-placement': '${2|top,right,bottom,left|}', 'data-bs-title': '${3:Tooltip title}', 'data-bs-toggle': 'tooltip', type: 'button'}
+  ${4:Show tooltip}

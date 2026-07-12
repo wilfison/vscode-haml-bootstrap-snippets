@@ -1,0 +1,22 @@
+%nav.navbar.navbar-expand-${1|sm,md,lg,xl|}.navbar-light.bg-light
+  %a.navbar-brand{href: '#'} ${2:Navbar}
+  %button.navbar-toggler{'aria-controls': '${3:navbarNav}', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation', 'data-target': '#${3:navbarNav}', 'data-toggle': 'collapse', type: 'button'}
+    %span.navbar-toggler-icon
+  .collapse.navbar-collapse#${3:navbarNav}
+    %ul.navbar-nav.mr-auto
+      %li.nav-item.active
+        %a.nav-link{href: '#'}
+          ${4:Home}
+          %span.sr-only (current)
+      %li.nav-item
+        %a.nav-link{href: '#'} ${5:Link}
+      %li.nav-item.dropdown
+        %a.nav-link.dropdown-toggle#${6:navbarDropdown}{'aria-expanded': 'false', 'aria-haspopup': 'true', 'data-toggle': 'dropdown', href: '#', role: 'button'} ${7:Dropdown}
+        .dropdown-menu{'aria-labelledby': '${6:navbarDropdown}'}
+          %a.dropdown-item{href: '#'} ${8:Action}
+          %a.dropdown-item{href: '#'} ${9:Another action}
+          .dropdown-divider
+          %a.dropdown-item{href: '#'} ${10:Something else here}
+    %form.form-inline.my-2.my-lg-0
+      %input.form-control.mr-sm-2{'aria-label': 'Search', placeholder: 'Search', type: 'search'}/
+      %button.btn.btn-outline-success.my-2.my-sm-0{type: 'submit'} Search

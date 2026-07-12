@@ -1,0 +1,4 @@
+%ol.list-group.list-group-numbered
+  %li.list-group-item ${1:A list item}
+  %li.list-group-item ${2:A second list item}
+  %li.list-group-item ${3:A third list item}

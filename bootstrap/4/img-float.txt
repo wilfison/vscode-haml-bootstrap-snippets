@@ -1,0 +1,1 @@
+%img.${1|float-left,float-right|}{alt: '${3:Floated image}', src: '${2:...}'}/

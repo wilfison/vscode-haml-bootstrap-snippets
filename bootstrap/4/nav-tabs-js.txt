@@ -1,0 +1,15 @@
+%ul.nav.nav-tabs{role: 'tablist'}
+  %li.nav-item
+    %a.nav-link.active#${2:home}-tab{'aria-controls': '${2:home}', 'aria-selected': 'true', 'data-toggle': '${1|tab,pill|}', href: '#${2:home}', role: 'tab'} ${3:Home}
+  %li.nav-item
+    %a.nav-link#${4:profile}-tab{'aria-controls': '${4:profile}', 'aria-selected': 'false', 'data-toggle': '${1|tab,pill|}', href: '#${4:profile}', role: 'tab'} ${5:Profile}
+  %li.nav-item
+    %a.nav-link#${6:contact}-tab{'aria-controls': '${6:contact}', 'aria-selected': 'false', 'data-toggle': '${1|tab,pill|}', href: '#${6:contact}', role: 'tab'} ${7:Contact}
+
+.tab-content
+  .tab-pane.fade.show.active#${2:home}{'aria-labelledby': '${2:home}-tab', role: 'tabpanel'}
+    ${8:Home content}
+  .tab-pane.fade#${4:profile}{'aria-labelledby': '${4:profile}-tab', role: 'tabpanel'}
+    ${9:Profile content}
+  .tab-pane.fade#${6:contact}{'aria-labelledby': '${6:contact}-tab', role: 'tabpanel'}
+    ${10:Contact content}

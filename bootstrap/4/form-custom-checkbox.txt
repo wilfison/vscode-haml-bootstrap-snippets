@@ -1,0 +1,3 @@
+.custom-control.custom-checkbox
+  %input.custom-control-input#${1:customCheck}{name: '${1:customCheck}', type: 'checkbox'}/
+  %label.custom-control-label{for: '${1:customCheck}'} ${2:Check this custom checkbox}

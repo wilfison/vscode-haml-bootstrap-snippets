@@ -1,0 +1,3 @@
+.form-check
+  %input.form-check-input#${1:check}{name: '${1:check}', type: 'checkbox', value: '${2:option1}'}/
+  %label.form-check-label{for: '${1:check}'} ${3:Default checkbox}

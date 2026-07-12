@@ -1,0 +1,2 @@
+.spinner-border{role: 'status'}
+  %span.visually-hidden ${1:Loading...}

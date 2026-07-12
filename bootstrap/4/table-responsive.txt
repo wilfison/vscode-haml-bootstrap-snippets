@@ -1,0 +1,10 @@
+.${1|table-responsive,table-responsive-sm,table-responsive-md,table-responsive-lg,table-responsive-xl|}
+  %table.table
+    %thead
+      %tr
+        %th{scope: 'col'} #
+        %th{scope: 'col'} ${2:Heading}
+    %tbody
+      %tr
+        %th{scope: 'row'} 1
+        %td ${3:Cell}

@@ -1,0 +1,3 @@
+.form-group
+  %label{for: '${1:file}'} ${2:Example file input}
+  %input.form-control-file#${1:file}{name: '${1:file}', type: 'file'}/

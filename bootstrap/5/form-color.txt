@@ -1,0 +1,3 @@
+.mb-3
+  %label.form-label{for: '${1:colorInput}'} ${2:Color picker}
+  %input.form-control.form-control-color#${1:colorInput}{name: '${1:colorInput}', title: '${3:Choose your color}', type: 'color', value: '${4:#563d7c}'}/

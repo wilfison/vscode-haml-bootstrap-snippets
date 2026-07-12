@@ -1,0 +1,5 @@
+%button.btn.btn-primary{'aria-controls': '${1:collapseExample}', 'aria-expanded': 'false', 'data-target': '#${1:collapseExample}', 'data-toggle': 'collapse', type: 'button'} ${2:Toggle collapse}
+
+.collapse#${1:collapseExample}
+  .card.card-body
+    $0

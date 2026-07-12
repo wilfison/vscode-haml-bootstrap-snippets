@@ -1,0 +1,5 @@
+.row
+  .col
+    ${1:Column}
+  .col
+    ${2:Column}

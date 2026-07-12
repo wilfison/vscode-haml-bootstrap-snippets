@@ -1,0 +1,1 @@
+%img.img-thumbnail{alt: '${2:Thumbnail}', src: '${1:...}'}/

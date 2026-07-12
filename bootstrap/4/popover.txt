@@ -1,0 +1,1 @@
+%button.btn.btn-${1|primary,secondary,success,danger,warning,info,light,dark|}{'data-content': '${4:And here is some amazing content. It is very engaging. Right?}', 'data-toggle': 'popover', title: '${3:Popover title}', type: 'button'} ${2:Click to toggle popover}

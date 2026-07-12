@@ -1,0 +1,3 @@
+.mb-3
+  %label.form-label{for: '${1:textarea}'} ${2:Label}
+  %textarea.form-control#${1:textarea}{name: '${1:textarea}', placeholder: '${3:Enter value}', rows: '3'}

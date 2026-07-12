@@ -1,0 +1,5 @@
+.input-group.mb-3
+  .input-group-prepend
+    .input-group-text
+      %input{'aria-label': '${1:Checkbox for following text input}', type: 'checkbox'}/
+  %input.form-control{'aria-label': '${2:Text input with checkbox}', type: 'text'}/

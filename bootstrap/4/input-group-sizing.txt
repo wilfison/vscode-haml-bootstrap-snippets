@@ -1,0 +1,4 @@
+.input-group.input-group-${1|lg,sm|}.mb-3
+  .input-group-prepend
+    %span.input-group-text#${2:sizing-addon} ${3:Small}
+  %input.form-control{'aria-describedby': '${2:sizing-addon}', 'aria-label': '${4:Sizing example input}', type: 'text'}/

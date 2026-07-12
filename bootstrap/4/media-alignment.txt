@@ -1,0 +1,5 @@
+.media
+  %img.align-self-${1|start,center,end|}.mr-3{alt: '${2:image}', src: '${3:image.png}', width: '64'}/
+  .media-body
+    %h5.mt-0 ${4:Media heading}
+    ${5:Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.}

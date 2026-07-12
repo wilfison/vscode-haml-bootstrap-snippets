@@ -1,0 +1,5 @@
+.row
+  .col.align-self-${1|start,center,end|}
+    $2
+  .col
+    $3

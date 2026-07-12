@@ -1,0 +1,4 @@
+%kbd
+  %kbd ${1:ctrl}
+  +
+  %kbd ${2:c}

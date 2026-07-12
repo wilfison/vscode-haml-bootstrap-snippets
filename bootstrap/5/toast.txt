@@ -1,0 +1,6 @@
+.toast{'aria-atomic': 'true', 'aria-live': 'assertive', role: 'alert'}
+  .toast-header
+    %strong.me-auto ${1:Bootstrap}
+    %small ${2:11 mins ago}
+    %button.btn-close{'aria-label': 'Close', 'data-bs-dismiss': 'toast', type: 'button'}
+  .toast-body ${3:Hello, world! This is a toast message.}

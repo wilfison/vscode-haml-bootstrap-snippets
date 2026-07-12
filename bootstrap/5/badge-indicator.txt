@@ -1,0 +1,4 @@
+%button.btn.btn-primary.position-relative{type: 'button'}
+  ${1:Profile}
+  %span.position-absolute.top-0.start-100.translate-middle.p-2.bg-${2|primary,secondary,success,danger,warning,info,light,dark|}.border.border-light.rounded-circle
+    %span.visually-hidden ${3:New alerts}

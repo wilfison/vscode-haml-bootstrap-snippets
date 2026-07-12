@@ -1,0 +1,4 @@
+.row.mb-3
+  %label.col-sm-2.col-form-label{for: '${1:input}'} ${2:Label}
+  .col-sm-10
+    %input.form-control#${1:input}{name: '${1:input}', type: '${3|text,email,password|}'}/

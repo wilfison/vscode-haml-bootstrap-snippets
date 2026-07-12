@@ -1,0 +1,3 @@
+.form-group
+  %label{for: '${1:textarea}'} ${2:Example textarea}
+  %textarea.form-control#${1:textarea}{name: '${1:textarea}', rows: '3'} $0

@@ -1,0 +1,7 @@
+.form-check.form-check-inline
+  %input.form-check-input#${1:inline1}{name: '${1:inline1}', type: 'checkbox', value: '${2:1}'}/
+  %label.form-check-label{for: '${1:inline1}'} ${3:One}
+
+.form-check.form-check-inline
+  %input.form-check-input#${4:inline2}{name: '${4:inline2}', type: 'checkbox', value: '${5:2}'}/
+  %label.form-check-label{for: '${4:inline2}'} ${6:Two}

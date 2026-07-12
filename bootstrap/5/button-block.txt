@@ -1,0 +1,3 @@
+.d-grid.gap-2
+  %button.btn.btn-${1|primary,secondary,success,danger,warning,info,light,dark|}{type: 'button'} ${2:Button}
+  %button.btn.btn-${1|primary,secondary,success,danger,warning,info,light,dark|}{type: 'button'} ${3:Button}

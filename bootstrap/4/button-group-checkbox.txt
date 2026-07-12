@@ -1,0 +1,10 @@
+.btn-group.btn-group-toggle{'data-toggle': 'buttons'}
+  %label.btn.btn-secondary.active
+    %input{autocomplete: 'off', checked: 'checked', type: 'checkbox'}/
+    ${1:Checkbox 1}
+  %label.btn.btn-secondary
+    %input{autocomplete: 'off', type: 'checkbox'}/
+    ${2:Checkbox 2}
+  %label.btn.btn-secondary
+    %input{autocomplete: 'off', type: 'checkbox'}/
+    ${3:Checkbox 3}

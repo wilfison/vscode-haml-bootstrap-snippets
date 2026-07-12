@@ -1,8 +1,0 @@
-%table.table.table-striped.table-hover
-  %thead
-    %tr
-      %th{scope: 'col'} ID
-  %tbody
-    - @${1:resource}s.each do |${1:resource}|
-      %tr
-        %td{scope: 'row'}= ${1:resource}.id

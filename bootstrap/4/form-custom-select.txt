@@ -1,0 +1,7 @@
+.form-group
+  %label{for: '${1:customSelect}'} ${2:Custom select}
+  %select.custom-select#${1:customSelect}{name: '${1:customSelect}'}
+    %option{selected: 'selected'} ${3:Open this select menu}
+    %option{value: '1'} ${4:One}
+    %option{value: '2'} ${5:Two}
+    %option{value: '3'} ${6:Three}

@@ -1,0 +1,8 @@
+%ul.nav.nav-tabs{role: 'tablist'}
+  %li.nav-item{role: 'presentation'}
+    %button.nav-link.active#${1:home}-tab{'aria-controls': '${1:home}-pane', 'aria-selected': 'true', 'data-bs-target': '#${1:home}-pane', 'data-bs-toggle': '${2|tab,pill|}', role: 'tab', type: 'button'} ${3:Home}
+  %li.nav-item{role: 'presentation'}
+    %button.nav-link#${4:profile}-tab{'aria-controls': '${4:profile}-pane', 'aria-selected': 'false', 'data-bs-target': '#${4:profile}-pane', 'data-bs-toggle': '${2|tab,pill|}', role: 'tab', type: 'button'} ${5:Profile}
+.tab-content
+  .tab-pane.fade.show.active#${1:home}-pane{'aria-labelledby': '${1:home}-tab', role: 'tabpanel', tabindex: '0'} ${6:Home content}
+  .tab-pane.fade#${4:profile}-pane{'aria-labelledby': '${4:profile}-tab', role: 'tabpanel', tabindex: '0'} ${7:Profile content}

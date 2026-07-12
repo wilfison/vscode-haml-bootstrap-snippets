@@ -1,0 +1,12 @@
+%nav.navbar.${1|fixed-top,fixed-bottom,sticky-top|}.navbar-expand-lg.navbar-light.bg-light
+  %a.navbar-brand{href: '#'} ${2:Navbar}
+  %button.navbar-toggler{'aria-controls': '${3:navbarPlacement}', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation', 'data-target': '#${3:navbarPlacement}', 'data-toggle': 'collapse', type: 'button'}
+    %span.navbar-toggler-icon
+  .collapse.navbar-collapse#${3:navbarPlacement}
+    %ul.navbar-nav.mr-auto
+      %li.nav-item.active
+        %a.nav-link{href: '#'}
+          ${4:Home}
+          %span.sr-only (current)
+      %li.nav-item
+        %a.nav-link{href: '#'} ${5:Link}

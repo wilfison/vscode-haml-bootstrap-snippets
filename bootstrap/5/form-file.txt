@@ -1,0 +1,3 @@
+.mb-3
+  %label.form-label{for: '${1:formFile}'} ${2:Label}
+  %input.form-control#${1:formFile}{name: '${1:formFile}', type: 'file'}/

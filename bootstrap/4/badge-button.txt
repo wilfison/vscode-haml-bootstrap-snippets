@@ -1,0 +1,4 @@
+%button.btn.btn-${1|primary,secondary,success,danger,warning,info,light,dark|}{type: 'button'}
+  ${2:Notifications}
+  %span.badge.badge-light ${3:4}
+  %span.sr-only ${4:unread messages}

@@ -1,0 +1,5 @@
+%ul.list-group.list-group-flush
+  %li.list-group-item ${1:An item}
+  %li.list-group-item ${2:A second item}
+  %li.list-group-item ${3:A third item}
+  %li.list-group-item ${4:A fourth item}

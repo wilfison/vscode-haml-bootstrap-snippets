@@ -1,0 +1,4 @@
+.input-group.mb-3
+  %input.form-control{'aria-describedby': '${1:basic-addon}', 'aria-label': "${2:Recipient's username}", placeholder: "${2:Recipient's username}", type: 'text'}/
+  .input-group-append
+    %span.input-group-text#${1:basic-addon} ${3:@example.com}

@@ -1,0 +1,9 @@
+.row.row-cols-2
+  .col
+    ${1:Column}
+  .col
+    ${2:Column}
+  .col
+    ${3:Column}
+  .col
+    ${4:Column}

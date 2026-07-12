@@ -1,0 +1,1 @@
+%button.btn.btn-secondary{'data-placement': '${1|top,right,bottom,left|}', 'data-toggle': 'tooltip', title: '${3:Tooltip text}', type: 'button'} ${2:Tooltip}

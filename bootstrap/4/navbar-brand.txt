@@ -1,0 +1,4 @@
+%nav.navbar.navbar-light.bg-light
+  %a.navbar-brand{href: '#'}
+    %img.d-inline-block.align-top{alt: '${2:Logo}', height: '30', src: '${1:logo.png}', width: '30'}/
+    ${3:Bootstrap}

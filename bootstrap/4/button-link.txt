@@ -1,0 +1,1 @@
+%a.btn.btn-${1|primary,secondary,success,danger,warning,info,light,dark|}{href: '#', role: 'button'} ${2:Link}

@@ -1,0 +1,5 @@
+.card.text-white.bg-${1|primary,secondary,success,danger,warning,info,light,dark|}.mb-3{style: 'max-width: 18rem;'}
+  .card-header ${2:Header}
+  .card-body
+    %h5.card-title ${3:Card title}
+    %p.card-text ${4:Some quick example text to build on the card title and make up the bulk of the card's content.}

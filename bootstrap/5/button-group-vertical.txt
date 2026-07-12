@@ -1,0 +1,4 @@
+.btn-group-vertical{'aria-label': '${1:Vertical button group}', role: 'group'}
+  %button.btn.btn-primary{type: 'button'} ${2:Button}
+  %button.btn.btn-primary{type: 'button'} ${3:Button}
+  %button.btn.btn-primary{type: 'button'} ${4:Button}

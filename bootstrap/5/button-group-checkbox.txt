@@ -1,0 +1,9 @@
+.btn-group{'aria-label': 'Basic checkbox toggle button group', role: 'group'}
+  %input.btn-check#${1:btncheck1}{autocomplete: 'off', type: 'checkbox'}/
+  %label.btn.btn-outline-${2|primary,secondary,success,danger,warning,info,light,dark|}{for: '${1:btncheck1}'} ${3:Checkbox 1}
+
+  %input.btn-check#${4:btncheck2}{autocomplete: 'off', type: 'checkbox'}/
+  %label.btn.btn-outline-${2|primary,secondary,success,danger,warning,info,light,dark|}{for: '${4:btncheck2}'} ${5:Checkbox 2}
+
+  %input.btn-check#${6:btncheck3}{autocomplete: 'off', type: 'checkbox'}/
+  %label.btn.btn-outline-${2|primary,secondary,success,danger,warning,info,light,dark|}{for: '${6:btncheck3}'} ${7:Checkbox 3}

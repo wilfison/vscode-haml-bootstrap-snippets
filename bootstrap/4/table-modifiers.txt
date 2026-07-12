@@ -1,0 +1,15 @@
+%table.table.${1|table-striped,table-bordered,table-borderless,table-hover,table-sm,table-dark|}
+  %thead
+    %tr
+      %th{scope: 'col'} #
+      %th{scope: 'col'} ${2:First}
+      %th{scope: 'col'} ${3:Last}
+  %tbody
+    %tr
+      %th{scope: 'row'} 1
+      %td ${4:Mark}
+      %td ${5:Otto}
+    %tr
+      %th{scope: 'row'} 2
+      %td ${6:Jacob}
+      %td ${7:Thornton}

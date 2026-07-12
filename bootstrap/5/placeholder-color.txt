@@ -1,0 +1,2 @@
+%p{'aria-hidden': 'true'}
+  %span.placeholder.col-12.bg-${1|primary,secondary,success,danger,warning,info,light,dark|}

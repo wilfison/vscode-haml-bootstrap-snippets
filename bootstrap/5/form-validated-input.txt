@@ -1,0 +1,5 @@
+.mb-3
+  %label.form-label{for: '${1:input}'} ${2:Label}
+  %input.form-control.is-${3|valid,invalid|}#${1:input}{name: '${1:input}', required: 'required', type: 'text', value: '${4:value}'}/
+  .${3|valid,invalid|}-feedback
+    ${5:Looks good!}

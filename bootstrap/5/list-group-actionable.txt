@@ -1,0 +1,5 @@
+.list-group
+  %a.list-group-item.list-group-item-action.active{'aria-current': 'true', href: '#'} ${1:The current link item}
+  %a.list-group-item.list-group-item-action{href: '#'} ${2:A second link item}
+  %a.list-group-item.list-group-item-action{href: '#'} ${3:A third link item}
+  %a.list-group-item.list-group-item-action.disabled{'aria-disabled': 'true', href: '#', tabindex: '-1'} ${4:A disabled link item}

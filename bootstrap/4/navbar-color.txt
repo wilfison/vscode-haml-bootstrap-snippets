@@ -1,0 +1,12 @@
+%nav.navbar.navbar-expand-lg.navbar-${1|dark,light|}.bg-${2|dark,primary,secondary,success,danger,warning,info,light|}
+  %a.navbar-brand{href: '#'} ${3:Navbar}
+  %button.navbar-toggler{'aria-controls': '${4:navbarColor}', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation', 'data-target': '#${4:navbarColor}', 'data-toggle': 'collapse', type: 'button'}
+    %span.navbar-toggler-icon
+  .collapse.navbar-collapse#${4:navbarColor}
+    %ul.navbar-nav.mr-auto
+      %li.nav-item.active
+        %a.nav-link{href: '#'}
+          ${5:Home}
+          %span.sr-only (current)
+      %li.nav-item
+        %a.nav-link{href: '#'} ${6:Link}

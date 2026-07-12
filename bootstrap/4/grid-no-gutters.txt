@@ -1,0 +1,5 @@
+.row.no-gutters
+  .col
+    $1
+  .col
+    $2

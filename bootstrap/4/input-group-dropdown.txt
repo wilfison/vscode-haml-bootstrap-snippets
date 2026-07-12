@@ -1,0 +1,10 @@
+.input-group.mb-3
+  .input-group-prepend
+    %button.btn.btn-outline-secondary.dropdown-toggle{'aria-expanded': 'false', 'aria-haspopup': 'true', 'data-toggle': 'dropdown', type: 'button'} ${1:Dropdown}
+    .dropdown-menu
+      %a.dropdown-item{href: '#'} ${2:Action}
+      %a.dropdown-item{href: '#'} ${3:Another action}
+      %a.dropdown-item{href: '#'} ${4:Something else here}
+      .dropdown-divider
+      %a.dropdown-item{href: '#'} ${5:Separated link}
+  %input.form-control{'aria-label': '${6:Text input with dropdown button}', type: 'text'}/

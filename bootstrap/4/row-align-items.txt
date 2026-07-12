@@ -1,0 +1,5 @@
+.row.align-items-${1|start,center,end|}
+  .col
+    $2
+  .col
+    $3

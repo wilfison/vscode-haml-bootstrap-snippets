@@ -1,0 +1,4 @@
+.progress
+  .progress-bar{'aria-valuemax': '100', 'aria-valuemin': '0', 'aria-valuenow': '${1:15}', role: 'progressbar', style: 'width: ${1:15}%'}
+  .progress-bar.bg-success{'aria-valuemax': '100', 'aria-valuemin': '0', 'aria-valuenow': '${2:30}', role: 'progressbar', style: 'width: ${2:30}%'}
+  .progress-bar.bg-info{'aria-valuemax': '100', 'aria-valuemin': '0', 'aria-valuenow': '${3:20}', role: 'progressbar', style: 'width: ${3:20}%'}

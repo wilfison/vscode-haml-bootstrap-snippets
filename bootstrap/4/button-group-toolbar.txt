@@ -1,0 +1,9 @@
+.btn-toolbar{'aria-label': '${1:Toolbar with button groups}', role: 'toolbar'}
+  .btn-group.mr-2{'aria-label': '${2:First group}', role: 'group'}
+    %button.btn.btn-secondary{type: 'button'} ${3:1}
+    %button.btn.btn-secondary{type: 'button'} ${4:2}
+    %button.btn.btn-secondary{type: 'button'} ${5:3}
+  .btn-group{'aria-label': '${6:Second group}', role: 'group'}
+    %button.btn.btn-secondary{type: 'button'} ${7:4}
+    %button.btn.btn-secondary{type: 'button'} ${8:5}
+    %button.btn.btn-secondary{type: 'button'} ${9:6}

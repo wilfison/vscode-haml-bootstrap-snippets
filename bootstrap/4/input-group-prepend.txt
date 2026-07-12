@@ -1,0 +1,4 @@
+.input-group.mb-3
+  .input-group-prepend
+    %span.input-group-text#${1:basic-addon} ${2:@}
+  %input.form-control{'aria-describedby': '${1:basic-addon}', 'aria-label': '${3:Username}', placeholder: '${3:Username}', type: 'text'}/

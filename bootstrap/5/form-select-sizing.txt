@@ -1,0 +1,6 @@
+.mb-3
+  %label.form-label{for: '${1:select}'} ${2:Label}
+  %select.form-select.form-select-${3|lg,sm|}#${1:select}{name: '${1:select}'}
+    %option{selected: 'selected'} ${4:Open this select menu}
+    %option{value: '1'} ${5:One}
+    %option{value: '2'} ${6:Two}

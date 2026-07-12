@@ -1,0 +1,10 @@
+.media
+  %img.mr-3{alt: '${1:image}', src: '${2:image.png}', width: '64'}/
+  .media-body
+    %h5.mt-0 ${3:Media heading}
+    ${4:Cras sit amet nibh libero, in gravida nulla.}
+    .media.mt-3
+      %img.mr-3{alt: '${5:image}', src: '${6:image.png}', width: '64'}/
+      .media-body
+        %h5.mt-0 ${7:Nested media heading}
+        ${8:Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.}

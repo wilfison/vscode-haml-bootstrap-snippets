@@ -1,0 +1,18 @@
+.carousel.slide#${1:carouselIndicators}
+  .carousel-indicators
+    %button.active{'aria-current': 'true', 'aria-label': 'Slide 1', 'data-bs-slide-to': '0', 'data-bs-target': '#${1:carouselIndicators}', type: 'button'}
+    %button{'aria-label': 'Slide 2', 'data-bs-slide-to': '1', 'data-bs-target': '#${1:carouselIndicators}', type: 'button'}
+    %button{'aria-label': 'Slide 3', 'data-bs-slide-to': '2', 'data-bs-target': '#${1:carouselIndicators}', type: 'button'}
+  .carousel-inner
+    .carousel-item.active
+      %img.d-block.w-100{alt: '${2:First slide}', src: '#'}/
+    .carousel-item
+      %img.d-block.w-100{alt: '${3:Second slide}', src: '#'}/
+    .carousel-item
+      %img.d-block.w-100{alt: '${4:Third slide}', src: '#'}/
+  %button.carousel-control-prev{'data-bs-slide': 'prev', 'data-bs-target': '#${1:carouselIndicators}', type: 'button'}
+    %span.carousel-control-prev-icon{'aria-hidden': 'true'}
+    %span.visually-hidden ${5:Previous}
+  %button.carousel-control-next{'data-bs-slide': 'next', 'data-bs-target': '#${1:carouselIndicators}', type: 'button'}
+    %span.carousel-control-next-icon{'aria-hidden': 'true'}
+    %span.visually-hidden ${6:Next}

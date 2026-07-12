@@ -1,0 +1,15 @@
+.card-group
+  .card
+    %img.card-img-top{alt: '${1:Card image}', src: '#'}/
+    .card-body
+      %h5.card-title ${2:Card title}
+      %p.card-text ${3:This card has supporting text below as a natural lead-in to additional content.}
+      %p.card-text
+        %small.text-muted ${4:Last updated 3 mins ago}
+  .card
+    %img.card-img-top{alt: '${5:Card image}', src: '#'}/
+    .card-body
+      %h5.card-title ${6:Card title}
+      %p.card-text ${7:This card has supporting text below as a natural lead-in to additional content.}
+      %p.card-text
+        %small.text-muted ${8:Last updated 3 mins ago}

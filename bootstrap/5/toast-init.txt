@@ -1,0 +1,4 @@
+:javascript
+  document.querySelectorAll('.toast').forEach((toastEl) => {
+    bootstrap.Toast.getOrCreateInstance(toastEl).show();
+  });

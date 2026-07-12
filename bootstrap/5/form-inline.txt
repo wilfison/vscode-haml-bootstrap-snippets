@@ -1,0 +1,6 @@
+%form.row.row-cols-lg-auto.g-3.align-items-center
+  .col-12
+    %label.visually-hidden{for: '${1:inlineInput}'} ${2:Username}
+    %input.form-control#${1:inlineInput}{name: '${1:inlineInput}', placeholder: '${3:Jane Doe}', type: 'text'}/
+  .col-12
+    %button.btn.btn-primary{type: 'submit'} ${4:Submit}

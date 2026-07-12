@@ -1,0 +1,3 @@
+.input-group
+  %span.input-group-text#${1:addon} ${2:@}
+  %input.form-control{'aria-describedby': '${1:addon}', 'aria-label': '${3:Username}', placeholder: '${3:Username}', type: 'text'}/

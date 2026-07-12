@@ -1,0 +1,3 @@
+.form-group
+  %label{for: '${1:range}'} ${2:Example range}
+  %input.form-control-range#${1:range}{max: '5', min: '0', name: '${1:range}', step: '0.5', type: 'range'}/

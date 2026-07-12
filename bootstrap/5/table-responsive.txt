@@ -1,0 +1,12 @@
+.${1|table-responsive,table-responsive-sm,table-responsive-md,table-responsive-lg,table-responsive-xl,table-responsive-xxl|}
+  %table.table
+    %thead
+      %tr
+        %th{scope: 'col'} #
+        %th{scope: 'col'} ${2:First}
+        %th{scope: 'col'} ${3:Last}
+    %tbody
+      %tr
+        %th{scope: 'row'} 1
+        %td ${4:Mark}
+        %td ${5:Otto}

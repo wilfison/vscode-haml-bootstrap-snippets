@@ -1,0 +1,10 @@
+%table.table
+  %caption ${1:List of users}
+  %thead
+    %tr
+      %th{scope: 'col'} #
+      %th{scope: 'col'} ${2:First}
+  %tbody
+    %tr
+      %th{scope: 'row'} 1
+      %td ${3:Mark}

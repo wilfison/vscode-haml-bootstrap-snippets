@@ -1,0 +1,5 @@
+.row.g-3
+  .col
+    %input.form-control{placeholder: '${1:First name}', type: 'text'}/
+  .col
+    %input.form-control{placeholder: '${2:Last name}', type: 'text'}/

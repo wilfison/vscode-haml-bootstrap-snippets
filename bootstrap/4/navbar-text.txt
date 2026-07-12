@@ -1,0 +1,4 @@
+%nav.navbar.navbar-light.bg-light
+  %a.navbar-brand{href: '#'} ${1:Navbar}
+  %span.navbar-text
+    ${2:Navbar text with an inline element}

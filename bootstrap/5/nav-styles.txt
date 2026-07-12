@@ -1,0 +1,9 @@
+%ul.nav.${1|nav-tabs,nav-pills,nav-underline|}
+  %li.nav-item
+    %a.nav-link.active{'aria-current': 'page', href: '#'} ${2:Active}
+  %li.nav-item
+    %a.nav-link{href: '#'} ${3:Link}
+  %li.nav-item
+    %a.nav-link{href: '#'} ${4:Link}
+  %li.nav-item
+    %a.nav-link.disabled{'aria-disabled': 'true'} ${5:Disabled}

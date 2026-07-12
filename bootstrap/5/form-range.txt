@@ -1,0 +1,3 @@
+.mb-3
+  %label.form-label{for: '${1:range}'} ${2:Label}
+  %input.form-range#${1:range}{name: '${1:range}', type: 'range'}/

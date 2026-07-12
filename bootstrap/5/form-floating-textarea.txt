@@ -1,0 +1,3 @@
+.form-floating
+  %textarea.form-control#${1:floatingTextarea}{name: '${1:floatingTextarea}', placeholder: '${2:Leave a comment here}', style: 'height: 100px'}
+  %label{for: '${1:floatingTextarea}'} ${3:Comments}

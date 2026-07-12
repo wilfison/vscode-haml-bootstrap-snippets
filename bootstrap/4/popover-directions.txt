@@ -1,0 +1,1 @@
+%button.btn.btn-secondary{'data-content': '${4:Popover content}', 'data-placement': '${1|top,right,bottom,left|}', 'data-toggle': 'popover', title: '${3:Popover title}', type: 'button'} ${2:Toggle popover}

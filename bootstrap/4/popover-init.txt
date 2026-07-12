@@ -1,0 +1,2 @@
+:javascript
+  $('[data-toggle="popover"]').popover();

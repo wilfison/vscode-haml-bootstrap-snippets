@@ -1,0 +1,13 @@
+.list-group
+  %a.list-group-item.list-group-item-action.active{'aria-current': 'true', href: '#'}
+    .d-flex.w-100.justify-content-between
+      %h5.mb-1 ${1:List group item heading}
+      %small ${2:3 days ago}
+    %p.mb-1 ${3:Some placeholder content in a paragraph.}
+    %small ${4:And some small print.}
+  %a.list-group-item.list-group-item-action{href: '#'}
+    .d-flex.w-100.justify-content-between
+      %h5.mb-1 ${5:List group item heading}
+      %small.text-muted ${6:3 days ago}
+    %p.mb-1 ${7:Some placeholder content in a paragraph.}
+    %small.text-muted ${8:And some muted small print.}

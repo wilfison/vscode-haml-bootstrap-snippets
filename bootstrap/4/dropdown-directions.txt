@@ -1,0 +1,6 @@
+.${1|dropup,dropright,dropleft|}
+  %button.btn.btn-secondary.dropdown-toggle#${2:dropdownMenuButton}{'aria-expanded': 'false', 'aria-haspopup': 'true', 'data-toggle': 'dropdown', type: 'button'}
+    ${3:Dropdown}
+  .dropdown-menu{'aria-labelledby': '${2:dropdownMenuButton}'}
+    %a.dropdown-item{href: '#'} ${4:Action}
+    %a.dropdown-item{href: '#'} ${5:Another action}

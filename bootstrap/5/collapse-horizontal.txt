@@ -1,0 +1,6 @@
+%button.btn.btn-primary{'aria-controls': '${1:collapseWidthExample}', 'aria-expanded': 'false', 'data-bs-target': '#${1:collapseWidthExample}', 'data-bs-toggle': 'collapse', type: 'button'}
+  ${2:Toggle width collapse}
+%div{style: 'min-height: 120px;'}
+  .collapse.collapse-horizontal#${1:collapseWidthExample}
+    .card.card-body{style: 'width: 300px;'}
+      $0

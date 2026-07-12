@@ -1,0 +1,2 @@
+%button.btn.btn-${1|primary,secondary,success,danger,warning,info,light,dark|}{'data-bs-content': '${2:Popover content}', 'data-bs-title': '${3:Popover title}', 'data-bs-toggle': 'popover', type: 'button'}
+  ${4:Show popover}

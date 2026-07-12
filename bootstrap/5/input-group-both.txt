@@ -1,0 +1,4 @@
+.input-group
+  %span.input-group-text \$
+  %input.form-control{'aria-label': '${1:Amount (to the nearest dollar)}', type: 'text'}/
+  %span.input-group-text ${2:.00}

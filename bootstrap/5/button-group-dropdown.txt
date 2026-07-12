@@ -1,0 +1,10 @@
+.btn-group{'aria-label': 'Button group with nested dropdown', role: 'group'}
+  %button.btn.btn-primary{type: 'button'} ${1:1}
+  %button.btn.btn-primary{type: 'button'} ${2:2}
+  .btn-group{role: 'group'}
+    %button.btn.btn-primary.dropdown-toggle{'aria-expanded': 'false', 'data-bs-toggle': 'dropdown', type: 'button'} ${3:Dropdown}
+    %ul.dropdown-menu
+      %li
+        %a.dropdown-item{href: '#'} ${4:Dropdown link}
+      %li
+        %a.dropdown-item{href: '#'} ${5:Dropdown link}

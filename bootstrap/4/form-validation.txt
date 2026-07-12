@@ -1,0 +1,7 @@
+%form.needs-validation{novalidate: 'novalidate'}
+  .form-group
+    %label{for: '${1:input}'} ${2:First name}
+    %input.form-control#${1:input}{name: '${1:input}', required: 'required', type: 'text', value: '${3:Mark}'}/
+    .valid-feedback ${4:Looks good!}
+    .invalid-feedback ${5:Please provide a valid value.}
+  %button.btn.btn-primary{type: 'submit'} ${6:Submit form}

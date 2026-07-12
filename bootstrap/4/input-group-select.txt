@@ -1,0 +1,8 @@
+.input-group.mb-3
+  .input-group-prepend
+    %label.input-group-text{for: '${1:inputGroupSelect}'} ${2:Options}
+  %select.custom-select#${1:inputGroupSelect}{name: '${1:inputGroupSelect}'}
+    %option{selected: 'selected'} ${3:Choose...}
+    %option{value: '1'} ${4:One}
+    %option{value: '2'} ${5:Two}
+    %option{value: '3'} ${6:Three}

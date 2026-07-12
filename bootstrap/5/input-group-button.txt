@@ -1,0 +1,3 @@
+.input-group
+  %input.form-control{'aria-describedby': '${1:button-addon}', 'aria-label': '${2:Recipient username}', placeholder: '${2:Recipient username}', type: 'text'}/
+  %button.btn.btn-outline-secondary#${1:button-addon}{type: 'button'} ${3:Button}

@@ -1,0 +1,15 @@
+%nav.navbar.navbar-expand-lg.bg-body-tertiary
+  .container-fluid
+    %a.navbar-brand{href: '#'} ${1:Offcanvas navbar}
+    %button.navbar-toggler{'aria-controls': '${2:offcanvas-navbar}', 'aria-label': 'Toggle navigation', 'data-bs-target': '#${2:offcanvas-navbar}', 'data-bs-toggle': 'offcanvas', type: 'button'}
+      %span.navbar-toggler-icon
+    .offcanvas.offcanvas-end#${2:offcanvas-navbar}{'aria-labelledby': '${2:offcanvas-navbar}-label', tabindex: '-1'}
+      .offcanvas-header
+        %h5.offcanvas-title#${2:offcanvas-navbar}-label ${3:Offcanvas}
+        %button.btn-close{'aria-label': 'Close', 'data-bs-dismiss': 'offcanvas', type: 'button'}
+      .offcanvas-body
+        %ul.navbar-nav.justify-content-end.flex-grow-1.pe-3
+          %li.nav-item
+            %a.nav-link.active{'aria-current': 'page', href: '#'} ${4:Home}
+          %li.nav-item
+            %a.nav-link{href: '#'} ${5:Link}

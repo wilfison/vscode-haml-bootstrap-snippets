@@ -1,0 +1,8 @@
+.carousel.slide#${1:carousel}{'data-ride': 'carousel'}
+  .carousel-inner
+    .carousel-item.active
+      %img.d-block.w-100{alt: '${2:First slide}', src: '#'}/
+    .carousel-item
+      %img.d-block.w-100{alt: '${3:Second slide}', src: '#'}/
+    .carousel-item
+      %img.d-block.w-100{alt: '${4:Third slide}', src: '#'}/

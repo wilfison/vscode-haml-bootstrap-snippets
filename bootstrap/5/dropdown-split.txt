@@ -1,0 +1,13 @@
+.btn-group
+  %button.btn.btn-${1|primary,secondary,success,danger,warning,info,light,dark|}{type: 'button'} ${2:Action}
+  %button.btn.btn-${1|primary,secondary,success,danger,warning,info,light,dark|}.dropdown-toggle.dropdown-toggle-split{'aria-expanded': 'false', 'data-bs-toggle': 'dropdown', type: 'button'}
+    %span.visually-hidden Toggle Dropdown
+  %ul.dropdown-menu
+    %li
+      %a.dropdown-item{href: '#'} ${3:Action}
+    %li
+      %a.dropdown-item{href: '#'} ${4:Another action}
+    %li
+      %hr.dropdown-divider/
+    %li
+      %a.dropdown-item{href: '#'} ${5:Separated link}

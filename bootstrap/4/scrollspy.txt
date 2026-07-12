@@ -1,0 +1,17 @@
+%nav.navbar.navbar-light.bg-light#${1:navbar-scroll}
+  %a.navbar-brand{href: '#'} ${2:Navbar}
+  %ul.nav.nav-pills
+    %li.nav-item
+      %a.nav-link.active{href: '#${3:section-1}'} ${4:Section 1}
+    %li.nav-item
+      %a.nav-link{href: '#${5:section-2}'} ${6:Section 2}
+    %li.nav-item
+      %a.nav-link{href: '#${7:section-3}'} ${8:Section 3}
+
+%div{'data-offset': '0', 'data-spy': 'scroll', 'data-target': '#${1:navbar-scroll}', tabindex: '0'}
+  %h4#${3:section-1} ${4:Section 1}
+  %p $9
+  %h4#${5:section-2} ${6:Section 2}
+  %p $10
+  %h4#${7:section-3} ${8:Section 3}
+  %p $11

@@ -1,0 +1,1 @@
+%img.img-fluid{alt: '${2:Responsive image}', src: '${1:...}'}/

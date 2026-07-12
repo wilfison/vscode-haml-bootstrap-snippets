@@ -1,0 +1,8 @@
+.btn-group{'aria-label': '${1:Button group with nested dropdown}', role: 'group'}
+  %button.btn.btn-secondary{type: 'button'} ${2:1}
+  %button.btn.btn-secondary{type: 'button'} ${3:2}
+  .btn-group{role: 'group'}
+    %button.btn.btn-secondary.dropdown-toggle#${4:btnGroupDrop}{'aria-expanded': 'false', 'aria-haspopup': 'true', 'data-toggle': 'dropdown', type: 'button'} ${5:Dropdown}
+    .dropdown-menu{'aria-labelledby': '${4:btnGroupDrop}'}
+      %a.dropdown-item{href: '#'} ${6:Dropdown link}
+      %a.dropdown-item{href: '#'} ${7:Dropdown link}

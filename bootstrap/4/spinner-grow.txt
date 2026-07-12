@@ -1,0 +1,2 @@
+.spinner-grow{role: 'status'}
+  %span.sr-only ${1:Loading...}

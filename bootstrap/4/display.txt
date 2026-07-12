@@ -1,0 +1,1 @@
+%h1.display-${1|1,2,3,4|} ${2:Display heading}

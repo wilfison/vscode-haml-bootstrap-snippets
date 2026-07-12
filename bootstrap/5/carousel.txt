@@ -1,0 +1,14 @@
+.carousel.slide#${1:carouselExample}
+  .carousel-inner
+    .carousel-item.active
+      %img.d-block.w-100{alt: '${2:First slide}', src: '#'}/
+    .carousel-item
+      %img.d-block.w-100{alt: '${3:Second slide}', src: '#'}/
+    .carousel-item
+      %img.d-block.w-100{alt: '${4:Third slide}', src: '#'}/
+  %button.carousel-control-prev{'data-bs-slide': 'prev', 'data-bs-target': '#${1:carouselExample}', type: 'button'}
+    %span.carousel-control-prev-icon{'aria-hidden': 'true'}
+    %span.visually-hidden ${5:Previous}
+  %button.carousel-control-next{'data-bs-slide': 'next', 'data-bs-target': '#${1:carouselExample}', type: 'button'}
+    %span.carousel-control-next-icon{'aria-hidden': 'true'}
+    %span.visually-hidden ${6:Next}

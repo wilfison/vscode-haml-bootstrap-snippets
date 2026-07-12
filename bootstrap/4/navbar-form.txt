@@ -1,0 +1,4 @@
+%nav.navbar.navbar-light.bg-light
+  %form.form-inline
+    %input.form-control.mr-sm-2{'aria-label': 'Search', placeholder: 'Search', type: 'search'}/
+    %button.btn.btn-outline-${1|primary,secondary,success,danger,warning,info,light,dark|}.my-2.my-sm-0{type: 'submit'} ${2:Search}

@@ -1,0 +1,11 @@
+%li.nav-item.dropdown
+  %a.nav-link.dropdown-toggle{'aria-expanded': 'false', 'data-bs-toggle': 'dropdown', href: '#', role: 'button'} ${1:Dropdown}
+  %ul.dropdown-menu
+    %li
+      %a.dropdown-item{href: '#'} ${2:Action}
+    %li
+      %a.dropdown-item{href: '#'} ${3:Another action}
+    %li
+      %hr.dropdown-divider/
+    %li
+      %a.dropdown-item{href: '#'} ${4:Something else here}

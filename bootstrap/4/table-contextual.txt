@@ -1,0 +1,9 @@
+%table.table
+  %thead
+    %tr
+      %th{scope: 'col'} #
+      %th{scope: 'col'} ${1:Column}
+  %tbody
+    %tr.table-${2|active,primary,secondary,success,danger,warning,info,light,dark|}
+      %th{scope: 'row'} 1
+      %td ${3:Cell}

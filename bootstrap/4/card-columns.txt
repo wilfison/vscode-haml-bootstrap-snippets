@@ -1,0 +1,13 @@
+.card-columns
+  .card
+    %img.card-img-top{alt: '${1:Card image}', src: '#'}/
+    .card-body
+      %h5.card-title ${2:Card title}
+      %p.card-text ${3:This card has supporting text below as a natural lead-in to additional content.}
+  .card.p-3
+    %blockquote.blockquote.mb-0
+      %p ${4:A well-known quote, contained in a blockquote element.}
+      %footer.blockquote-footer ${5:Someone famous}
+  .card.bg-primary.text-white.text-center.p-3
+    %blockquote.blockquote.mb-0
+      %p ${6:A card with a colored background and centered content.}

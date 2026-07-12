@@ -1,0 +1,10 @@
+.btn-group
+  %button.btn.btn-secondary.btn-${1|lg,sm|}.dropdown-toggle{'aria-expanded': 'false', 'data-bs-toggle': 'dropdown', type: 'button'}
+    ${2:Dropdown button}
+  %ul.dropdown-menu
+    %li
+      %a.dropdown-item{href: '#'} ${3:Action}
+    %li
+      %a.dropdown-item{href: '#'} ${4:Another action}
+    %li
+      %a.dropdown-item{href: '#'} ${5:Something else here}

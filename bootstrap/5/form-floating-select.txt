@@ -1,0 +1,6 @@
+.form-floating
+  %select.form-select#${1:floatingSelect}{'aria-label': '${2:Works with selects}', name: '${1:floatingSelect}'}
+    %option{selected: 'selected'} ${3:Open this select menu}
+    %option{value: '1'} ${4:One}
+    %option{value: '2'} ${5:Two}
+  %label{for: '${1:floatingSelect}'} ${6:Label}

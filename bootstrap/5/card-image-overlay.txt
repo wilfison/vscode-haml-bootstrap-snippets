@@ -1,0 +1,7 @@
+.card.text-bg-dark
+  %img.card-img{alt: '${1:Card image}', src: '#'}/
+  .card-img-overlay
+    %h5.card-title ${2:Card title}
+    %p.card-text ${3:Some quick example text to build on the card title and make up the bulk of the card's content.}
+    %p.card-text
+      %small ${4:Last updated 3 mins ago}

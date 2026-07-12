@@ -1,0 +1,1 @@
+%button.btn.btn-${1|primary,secondary,success,danger,warning,info,light,dark|}.btn-block{type: 'button'} ${2:Block level button}

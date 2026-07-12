@@ -1,0 +1,4 @@
+:javascript
+  document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach((tooltipEl) => {
+    new bootstrap.Tooltip(tooltipEl);
+  });

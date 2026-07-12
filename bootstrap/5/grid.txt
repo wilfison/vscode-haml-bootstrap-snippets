@@ -1,0 +1,8 @@
+.${1|container,container-fluid,container-sm,container-md,container-lg,container-xl,container-xxl|}
+  .row
+    .col
+      ${2:Column}
+    .col
+      ${3:Column}
+    .col
+      ${4:Column}

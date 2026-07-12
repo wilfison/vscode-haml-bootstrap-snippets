@@ -1,0 +1,7 @@
+.form-check
+  %input.form-check-input#${1:radio1}{name: '${2:radioGroup}', type: 'radio', value: '${3:1}'}/
+  %label.form-check-label{for: '${1:radio1}'} ${4:Default radio}
+
+.form-check
+  %input.form-check-input#${5:radio2}{name: '${2:radioGroup}', type: 'radio', value: '${6:2}'}/
+  %label.form-check-label{for: '${5:radio2}'} ${7:Second radio}

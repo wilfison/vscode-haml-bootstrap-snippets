@@ -1,0 +1,14 @@
+.dropdown
+  %button.btn.btn-secondary.dropdown-toggle{'aria-expanded': 'false', 'data-bs-toggle': 'dropdown', type: 'button'}
+    ${1:Dropdown}
+  %ul.dropdown-menu
+    %li
+      %h6.dropdown-header ${2:Dropdown header}
+    %li
+      %a.dropdown-item.active{'aria-current': 'true', href: '#'} ${3:Active action}
+    %li
+      %a.dropdown-item{href: '#'} ${4:Normal action}
+    %li
+      %hr.dropdown-divider/
+    %li
+      %a.dropdown-item.disabled{'aria-disabled': 'true', href: '#', tabindex: '-1'} ${5:Disabled action}

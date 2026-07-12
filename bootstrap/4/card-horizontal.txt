@@ -1,0 +1,10 @@
+.card
+  .row.no-gutters
+    .col-md-4
+      %img.card-img{alt: '${1:Card image}', src: '#'}/
+    .col-md-8
+      .card-body
+        %h5.card-title ${2:Card title}
+        %p.card-text ${3:This is a wider card with supporting text below as a natural lead-in to additional content.}
+        %p.card-text
+          %small.text-muted ${4:Last updated 3 mins ago}

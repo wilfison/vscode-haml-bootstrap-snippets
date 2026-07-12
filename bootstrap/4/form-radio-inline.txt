@@ -1,0 +1,6 @@
+.form-check.form-check-inline
+  %input.form-check-input#${1:radio1}{name: '${2:inlineRadios}', type: 'radio', value: 'option1'}/
+  %label.form-check-label{for: '${1:radio1}'} ${3:1}
+.form-check.form-check-inline
+  %input.form-check-input#${4:radio2}{name: '${2:inlineRadios}', type: 'radio', value: 'option2'}/
+  %label.form-check-label{for: '${4:radio2}'} ${5:2}

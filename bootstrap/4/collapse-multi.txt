@@ -1,0 +1,14 @@
+%p
+  %a.btn.btn-primary{'aria-controls': '${1:multiCollapseExample1}', 'aria-expanded': 'false', 'data-toggle': 'collapse', href: '#${1:multiCollapseExample1}', role: 'button'} ${2:Toggle first element}
+  %button.btn.btn-primary{'aria-controls': '${3:multiCollapseExample2}', 'aria-expanded': 'false', 'data-target': '#${3:multiCollapseExample2}', 'data-toggle': 'collapse', type: 'button'} ${4:Toggle second element}
+  %button.btn.btn-primary{'aria-controls': '${1:multiCollapseExample1} ${3:multiCollapseExample2}', 'aria-expanded': 'false', 'data-target': '.multi-collapse', 'data-toggle': 'collapse', type: 'button'} ${5:Toggle both elements}
+
+.row
+  .col
+    .collapse.multi-collapse#${1:multiCollapseExample1}
+      .card.card-body
+        ${6:Some placeholder content for the first collapsible element.}
+  .col
+    .collapse.multi-collapse#${3:multiCollapseExample2}
+      .card.card-body
+        ${7:Some placeholder content for the second collapsible element.}

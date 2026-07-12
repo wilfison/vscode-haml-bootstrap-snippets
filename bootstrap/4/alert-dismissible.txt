@@ -1,0 +1,4 @@
+.alert.alert-${1|primary,secondary,success,danger,warning,info,light,dark|}.alert-dismissible.fade.show{role: 'alert'}
+  ${2:A dismissible alert message.}
+  %button.close{'aria-label': 'Close', 'data-dismiss': 'alert', type: 'button'}
+    %span{'aria-hidden': 'true'} &times;

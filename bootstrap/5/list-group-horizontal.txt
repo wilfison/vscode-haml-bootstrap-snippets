@@ -1,0 +1,4 @@
+%ul.list-group.list-group-horizontal-${1|sm,md,lg,xl,xxl|}
+  %li.list-group-item ${2:An item}
+  %li.list-group-item ${3:A second item}
+  %li.list-group-item ${4:A third item}

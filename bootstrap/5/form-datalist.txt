@@ -1,0 +1,7 @@
+.mb-3
+  %label.form-label{for: '${1:dataList}'} ${2:Label}
+  %input.form-control#${1:dataList}{list: '${3:datalistOptions}', name: '${1:dataList}', placeholder: '${4:Type to search...}'}/
+  %datalist#${3:datalistOptions}
+    %option{value: '${5:One}'}
+    %option{value: '${6:Two}'}
+    %option{value: '${7:Three}'}

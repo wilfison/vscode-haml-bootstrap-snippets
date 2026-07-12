@@ -1,0 +1,17 @@
+%nav.navbar.bg-body-tertiary.px-3.mb-3#${1:navbar-scrollspy}
+  %a.navbar-brand{href: '#'} ${2:Navbar}
+  %ul.nav.nav-pills
+    %li.nav-item
+      %a.nav-link{href: '#${3:scrollspy-1}'} ${4:First}
+    %li.nav-item
+      %a.nav-link{href: '#${5:scrollspy-2}'} ${6:Second}
+    %li.nav-item
+      %a.nav-link{href: '#${7:scrollspy-3}'} ${8:Third}
+
+.p-3.border.rounded-2{'data-bs-root-margin': '0px 0px -40%', 'data-bs-smooth-scroll': 'true', 'data-bs-spy': 'scroll', 'data-bs-target': '#${1:navbar-scrollspy}', style: 'height: 200px; overflow-y: scroll;', tabindex: '0'}
+  %h4#${3:scrollspy-1} ${9:First heading}
+  %p ${10:First section content.}
+  %h4#${5:scrollspy-2} ${11:Second heading}
+  %p ${12:Second section content.}
+  %h4#${7:scrollspy-3} ${13:Third heading}
+  %p ${14:Third section content.}

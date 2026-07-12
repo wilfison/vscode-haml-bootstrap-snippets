@@ -1,0 +1,6 @@
+.input-group.mb-3
+  .input-group-prepend
+    %span.input-group-text#${1:fileAddon} ${2:Upload}
+  .custom-file
+    %input.custom-file-input#${3:inputGroupFile}{'aria-describedby': '${1:fileAddon}', name: '${3:inputGroupFile}', type: 'file'}/
+    %label.custom-file-label{for: '${3:inputGroupFile}'} ${4:Choose file}

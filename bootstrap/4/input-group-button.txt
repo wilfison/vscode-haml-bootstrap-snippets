@@ -1,0 +1,4 @@
+.input-group.mb-3
+  %input.form-control{'aria-describedby': '${1:button-addon}', 'aria-label': '${2:Example text with button addon}', type: 'text'}/
+  .input-group-append
+    %button.btn.btn-outline-secondary#${1:button-addon}{type: 'button'} ${3:Button}

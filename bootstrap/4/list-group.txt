@@ -1,0 +1,5 @@
+%ul.list-group
+  %li.list-group-item.active{'aria-current': 'true'} ${1:An active item}
+  %li.list-group-item ${2:A second item}
+  %li.list-group-item ${3:A third item}
+  %li.list-group-item.disabled ${4:A disabled item}

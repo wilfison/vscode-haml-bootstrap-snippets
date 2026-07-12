@@ -1,0 +1,10 @@
+.btn-group.btn-group-toggle{'data-toggle': 'buttons'}
+  %label.btn.btn-secondary.active
+    %input{autocomplete: 'off', checked: 'checked', name: '${1:options}', type: 'radio'}/
+    ${2:Radio 1}
+  %label.btn.btn-secondary
+    %input{autocomplete: 'off', name: '${1:options}', type: 'radio'}/
+    ${3:Radio 2}
+  %label.btn.btn-secondary
+    %input{autocomplete: 'off', name: '${1:options}', type: 'radio'}/
+    ${4:Radio 3}

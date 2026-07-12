@@ -1,0 +1,9 @@
+%button.btn.btn-primary.d-${1|sm,md,lg,xl,xxl|}-none{'aria-controls': '${2:offcanvas}', 'data-bs-target': '#${2:offcanvas}', 'data-bs-toggle': 'offcanvas', type: 'button'}
+  ${3:Toggle offcanvas}
+
+.offcanvas-${1|sm,md,lg,xl,xxl|}.offcanvas-end#${2:offcanvas}{'aria-labelledby': '${2:offcanvas}-label', tabindex: '-1'}
+  .offcanvas-header
+    %h5.offcanvas-title#${2:offcanvas}-label ${4:Responsive offcanvas}
+    %button.btn-close{'aria-label': 'Close', 'data-bs-dismiss': 'offcanvas', 'data-bs-target': '#${2:offcanvas}', type: 'button'}
+  .offcanvas-body
+    $0

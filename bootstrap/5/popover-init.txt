@@ -1,0 +1,4 @@
+:javascript
+  document.querySelectorAll('[data-bs-toggle="popover"]').forEach((popoverEl) => {
+    new bootstrap.Popover(popoverEl);
+  });

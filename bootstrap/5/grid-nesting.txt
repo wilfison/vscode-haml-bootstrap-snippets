@@ -1,0 +1,8 @@
+.row
+  .col-sm-9
+    ${1:Level 1: .col-sm-9}
+    .row
+      .col-8.col-sm-6
+        ${2:Level 2: .col-8 .col-sm-6}
+      .col-4.col-sm-6
+        ${3:Level 2: .col-4 .col-sm-6}

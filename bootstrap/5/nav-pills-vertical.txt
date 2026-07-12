@@ -1,0 +1,7 @@
+.d-flex.align-items-start
+  .nav.flex-column.nav-pills.me-3{'aria-orientation': 'vertical', role: 'tablist'}
+    %button.nav-link.active#${1:home}-tab{'aria-controls': '${1:home}-pane', 'aria-selected': 'true', 'data-bs-target': '#${1:home}-pane', 'data-bs-toggle': 'pill', role: 'tab', type: 'button'} ${2:Home}
+    %button.nav-link#${3:profile}-tab{'aria-controls': '${3:profile}-pane', 'aria-selected': 'false', 'data-bs-target': '#${3:profile}-pane', 'data-bs-toggle': 'pill', role: 'tab', type: 'button'} ${4:Profile}
+  .tab-content
+    .tab-pane.fade.show.active#${1:home}-pane{'aria-labelledby': '${1:home}-tab', role: 'tabpanel', tabindex: '0'} ${5:Home content}
+    .tab-pane.fade#${3:profile}-pane{'aria-labelledby': '${3:profile}-tab', role: 'tabpanel', tabindex: '0'} ${6:Profile content}

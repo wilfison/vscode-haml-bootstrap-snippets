@@ -1,0 +1,9 @@
+.btn-group{'aria-label': 'Basic radio toggle button group', role: 'group'}
+  %input.btn-check#${1:btnradio1}{autocomplete: 'off', checked: 'checked', name: '${2:btnradio}', type: 'radio'}/
+  %label.btn.btn-outline-${3|primary,secondary,success,danger,warning,info,light,dark|}{for: '${1:btnradio1}'} ${4:Radio 1}
+
+  %input.btn-check#${5:btnradio2}{autocomplete: 'off', name: '${2:btnradio}', type: 'radio'}/
+  %label.btn.btn-outline-${3|primary,secondary,success,danger,warning,info,light,dark|}{for: '${5:btnradio2}'} ${6:Radio 2}
+
+  %input.btn-check#${7:btnradio3}{autocomplete: 'off', name: '${2:btnradio}', type: 'radio'}/
+  %label.btn.btn-outline-${3|primary,secondary,success,danger,warning,info,light,dark|}{for: '${7:btnradio3}'} ${8:Radio 3}
