@@ -25,8 +25,9 @@ class Bootstrap {
   }
 
   public async load() {
-    if (this.cacheIsUsable()) {
-      this.classList = JSON.parse(cache.readCache('bootstrap', this.version));
+    const cached = this.readUsableCache();
+    if (cached) {
+      this.classList = cached;
       return;
     }
 
@@ -41,16 +42,27 @@ class Bootstrap {
     }
   }
 
-  private cacheIsUsable(): boolean {
+  // Returns the cached class list only when it is fresh AND non-empty. A cache
+  // holding `[]` (written by an older build before the empty-list write guard,
+  // or for a version that once failed to load) must never be served: for pinned
+  // versions it would otherwise count as valid forever, leaving class
+  // completion permanently empty. Corrupt JSON is treated the same way.
+  private readUsableCache(): Array<string> | null {
     if (!cache.cacheExists('bootstrap', this.version)) {
-      return false;
+      return null;
     }
 
-    if (this.version === 'latest') {
-      return cache.cacheAgeMs('bootstrap', this.version) < LATEST_CACHE_TTL_MS;
+    if (this.version === 'latest' && cache.cacheAgeMs('bootstrap', this.version) >= LATEST_CACHE_TTL_MS) {
+      return null;
     }
 
-    return true;
+    try {
+      const parsed = JSON.parse(cache.readCache('bootstrap', this.version));
+      return Array.isArray(parsed) && parsed.length > 0 ? parsed : null;
+    } catch (error) {
+      console.error(`Error reading Bootstrap class cache: ${error}`);
+      return null;
+    }
   }
 
   private async loadRemote() {

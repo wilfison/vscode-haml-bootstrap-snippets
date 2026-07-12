@@ -17,6 +17,18 @@
   ],
   "main": "./out/extension.js",
   "contributes": {
+    "languages": [
+      {
+        "id": "haml",
+        "aliases": [
+          "HAML",
+          "haml"
+        ],
+        "extensions": [
+          ".haml"
+        ]
+      }
+    ],
     "configuration": {
       "title": "HAML Bootstrap Snippets & Class Autocomplete",
       "properties": {
