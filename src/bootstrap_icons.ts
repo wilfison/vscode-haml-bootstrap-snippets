@@ -17,6 +17,11 @@ class BootstrapIcons extends CssLibrary {
   protected localCssPath(): string {
     return path.join(this.rootPath, 'node_modules', 'bootstrap-icons', 'font', 'bootstrap-icons.min.css');
   }
+
+  // `__dirname` is `out/` at runtime, so `../data` is the shipped snapshot dir.
+  protected embeddedFallbackFile(): string {
+    return path.resolve(__dirname, '../data/bootstrap-icons.json');
+  }
 }
 
 export default BootstrapIcons;

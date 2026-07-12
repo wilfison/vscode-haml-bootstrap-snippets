@@ -27,7 +27,8 @@ function buildSnippet(bsVersion, fileLocation) {
 }
 
 const BS_VERSIONS = ["4", "5"];
-const bootstrapDir = path.join(__dirname, "bootstrap");
+const rootDir = path.join(__dirname, "..");
+const bootstrapDir = path.join(rootDir, "bootstrap");
 
 BS_VERSIONS.forEach((bsVersion) => {
   const files = fs
@@ -43,7 +44,7 @@ BS_VERSIONS.forEach((bsVersion) => {
   });
 
   fs.writeFileSync(
-    path.join(__dirname, `snippets/bootstrap${bsVersion}.code-snippets`),
+    path.join(rootDir, "snippets", `bootstrap${bsVersion}.code-snippets`),
     JSON.stringify(snippets, null, 2) + "\n"
   );
 });

@@ -1,7 +1,7 @@
 .vscode/**
 .vscode-test/**
 bootstrap/**
-lib/**
+scripts/**
 tmp/**
 images/*.gif
 .gitignore

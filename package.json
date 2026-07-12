@@ -55,8 +55,9 @@
     "url": "https://github.com/Wilfison/vscode-haml-bootstrap-snippets.git"
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile && npm run compile-snippets",
-    "compile-snippets": "node builder.js",
+    "vscode:prepublish": "npm run compile && npm run compile-snippets && npm run compile-class-lists",
+    "compile-snippets": "node scripts/builder.js",
+    "compile-class-lists": "node scripts/class_lists_builder.js",
     "compile": "rm -rf ./out/* && tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",

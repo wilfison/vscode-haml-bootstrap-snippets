@@ -35,6 +35,10 @@ abstract class CssLibrary {
   // The absolute path to the compiled CSS inside the local node_modules copy.
   protected abstract localCssPath(): string;
 
+  // The absolute path to the offline snapshot shipped inside the extension,
+  // used as a last resort when the live source can't be reached.
+  protected abstract embeddedFallbackFile(): string;
+
   // True when the library was actually found in the workspace (a pinned
   // version), as opposed to falling back to 'latest'.
   public get detected(): boolean {
@@ -56,6 +60,25 @@ abstract class CssLibrary {
 
     if (this.classList.length > 0) {
       cache.writeCache(this.lib, this.version, this.classList);
+      return;
+    }
+
+    // Last resort: an offline snapshot shipped with the extension, so class
+    // completion is never permanently empty when the CDN is unreachable and
+    // nothing is cached. Intentionally not cached, so the live source is
+    // retried next session once the network recovers.
+    this.loadEmbeddedFallback();
+  }
+
+  private loadEmbeddedFallback() {
+    try {
+      const parsed = JSON.parse(readFileSync(this.embeddedFallbackFile(), 'utf8'));
+
+      if (Array.isArray(parsed) && parsed.length > 0) {
+        this.classList = parsed;
+      }
+    } catch (error) {
+      console.error(`Error reading ${this.lib} embedded classes: ${error}`);
     }
   }
 

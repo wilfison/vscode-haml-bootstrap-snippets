@@ -17,6 +17,14 @@ class Bootstrap extends CssLibrary {
   protected localCssPath(): string {
     return path.join(this.rootPath, 'node_modules', 'bootstrap', 'dist', 'css', 'bootstrap.min.css');
   }
+
+  // Pick the snapshot by major version. When the version can't be pinned
+  // (`latest`) or is anything other than 4, fall back to BS5 (the current
+  // default). `__dirname` is `out/` at runtime, so `../data` is the shipped dir.
+  protected embeddedFallbackFile(): string {
+    const major = this.majorVersion === '4' ? '4' : '5';
+    return path.resolve(__dirname, `../data/bootstrap-${major}.json`);
+  }
 }
 
 export default Bootstrap;
